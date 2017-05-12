@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LibroMatico</title>
+
+    <!-- CSS -->
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+     <link href="css/buscar.css" rel="stylesheet" >
+
+</head>
+
+<body>
+
+    <section class="container-fluid">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <section class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">LibroMatico</a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"> <span class="glyphicon glyphicon-search"></span> Buscar</a></li>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="glyphicon glyphicon-equalizer"></span> Top
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Más vistos</a></li>
+                        <li><a href="#">últimos agregados</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <span class="glyphicon glyphicon-user"></span> Cuenta
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Registrar</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+            </section>
+        </nav>
+    </section>
+
+    <div class="container-fluid" style="margin-top : 50px;">
+        <div class="row">
+            <ol class="breadcrumb">
+                <li><a href="index.html">LibroMatico</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="active">Buscar</li>
+            </ol>
+
+            <div class="row">
+                    <!--Bloque izquierdo-->
+
+                    <section class="col-lg-2 Sin_Padding bloque_izquierdo">
+                        <div class="navbar-toggle btn-group btn-group-justified boton_filtroBusqueda" role="group" aria-label="...">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">Filtro de busqueda
+                                    <span class="glyphicon glyphicon-menu-down"></span></button>
+                            </div>
+                        </div>
+                        <div class="panel panel-default sombra_panel">
+                            <div class="panel-body">
+                                <div class="container-fluid">
+
+
+
+                                    <div class="col-lg-12 bloque_Izquierdo collapse navbar-collapse" id="collapseExample">
+                                        <div class="page-header">
+                                            <h3>Filtro de busqueda</h3>
+                                        </div>
+                                        <div class="container-fluid">
+
+                                            <h4>Buscar por</h4>
+                                            <form role="form">
+                                                <section class="form-group">
+                                                    <section class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" id="checkbox_1">Titulo</label>
+                                                    </section>
+                                                    <section class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" id="checkbox_2">Autor</label>
+                                                    </section>
+                                                    <section class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" id="checkbox_3">Resumen</label>
+                                                    </section>
+                                                    <section class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" value="checkbox_4" id="checkbox_4">Propiedades</label>
+                                                    </section>
+                                                    <section class="checkbox">
+                                                        <label>
+                                                            <input type="checkbox" id="checkbox_5" data-toggle="collapse" data-target="#collapseRadio" aria-expanded="false" aria-controls="collapseRadio">Mi ubicación</label>
+                                                    </section>
+                                                    <!--Radio-->
+                                                    <form id="annio_form">
+                                                        <section class="form-group collapse" id="collapseRadio">
+                                                            <label>En un radio de:</label>
+                                                            <input class="km_text" type="text" disabled name="radio_text" id="radio_text">
+                                                            <label>Km</label>
+                                                            <input type="range" name="radio_range" id="radio_range" min="1" max="200" step="1" onchange="">
+                                                        </section>
+                                                    </form>
+                                                </section>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <!--Bloque derecho-->
+                    <section class="col-lg-10 bloque_derecho Sin_Padding">
+                        <div class="panel panel-default sombra_panel">
+                            <div class="panel-body">
+                                <div class="container-fluid Sin_Padding">
+                                    <div class="input-group text_Buscar">
+                                        <input type="text" class="form-control" placeholder="Buscar...">
+                                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Buscar</button>
+                    </span>
+                                    </div>
+                                    <div class="col-lg-12 bloque_resultados_busqueda">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                                <h3 class="titulo_resultados">Resultados</h3>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-xs-6">
+                                                <div class="dropdown pull-right">
+                                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                        Ordenar
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                        <li><a href="#">Alfabeto</a></li>
+                                                        <li><a href="#">mas visitados</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="container-fluid bloque_resultados">
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 1</h3>
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 2</h3>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 3</h3>
+                                                                <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img1.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 3</h3>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption ">
+                                                                <h3>Item 1</h3>
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 2</h3>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 3</h3>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 3</h3>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 1</h3>
+                                                                <p></p>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 2</h3>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 3</h3>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div class="col-sm-6 col-md-3 col-xs-6">
+                                                    <a role="button" href="Item.html">
+                                                        <div class="thumbnail ">
+                                                            <img class="imagen_resultados2 img-responsive" src="img/img2.jpg" />
+                                                            <div class="caption">
+                                                                <h3>Item 3</h3>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+
+                                            <nav aria-label="..." class="barra_paginacion">
+                                                <ul class="pagination pagination-lg">
+                                                    <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                                    <li class=""><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                                                    <li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                                                    <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                                                    <li class=""><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                                                    <li class=""><a href="#">5 <span class="sr-only">(current)</span></a></li>
+                                                    <li class=""><a href="#" aria-label="next"><span aria-hidden="true">&raquo;</span></a></li>
+                                                </ul>
+                                            </nav>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+        </div>
+        <hr>
+        <footer>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                <p>
+                  © 2016 LibroMatico
+                </p>
+                <p>
+                  Número de usuarios: 234343
+                </p>
+                <p>
+                  Número de prestados realizados: 1345333
+                </p>
+                <p>
+
+                </p>
+              </div>
+              <div class="col-md-6 col-sm-6 col-xs-6">
+                 <blockquote>
+                   <p>"El que lee mucho y anda mucho, ve mucho y sabe mucho."</p>
+                   <footer> Miguel de Cervantes (1547-1616) Escritor español.</footer>
+                 </blockquote>
+              </div>
+              <div class="copyright col-xs-12">
+                <div class="text-center">
+                  <p>
+                    Made in Chile <span>CL</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+    </div>
+
+
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+
+<!-- JS -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+<!--Calendario-->
+
+
+<!--Annios-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#radio_range').change(function () {
+            $('#radio_text').val($(this).val());
+        });
+    });
+</script>
+
+
+
+
+
+
+</html>

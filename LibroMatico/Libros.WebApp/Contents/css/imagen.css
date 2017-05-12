@@ -1,0 +1,14 @@
+﻿.form-control[readonly], fieldset[disabled] .form-control 
+{
+cursor: pointer;
+background-color: #fff;
+}
+input[type='file'] 
+{
+position: absolute;
+opacity: 0;
+/* For IE8 "Keep the IE opacity settings in this order for max compatibility" */
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+/* For IE5 - 7 */
+filter: alpha(opacity=0);
+}

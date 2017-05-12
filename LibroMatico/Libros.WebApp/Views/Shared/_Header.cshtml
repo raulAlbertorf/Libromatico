@@ -1,0 +1,172 @@
+﻿@{
+    var cuenta = Libros.WebApp.Utils.SessionManager.CuentaActiva();
+    var perfil = Libros.WebApp.Utils.SessionManager.PerfilActivo();
+}
+
+@section Scripts{ 
+
+}
+
+<nav class="navbar navbar-default navbar-lm-white">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#lm-navbar-collapse" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand texto-verde letra-lobster" href="@Url.Action("Index", "Home")" title="Libromatico">
+                <span>Libromatico</span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="lm-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="@Url.Action("Index", "Home")">
+                        <i class="fa fa-home" aria-hidden="true"></i> Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("MasVistos","Home")"><i class="fa fa-sort-amount-asc" aria-hidden="true">
+                        </i> TOP
+                    </a>
+                </li>
+                <li>
+                    <a href="@Url.Action("Faq", "Home")">
+                        <i class="glyphicon glyphicon-question-sign" aria-hidden="true"></i> FAQ
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                @{
+                    if (cuenta != null)
+                    {
+                        if (perfil != null)
+                        {
+
+                            var solicitudesEntrantes = perfil.SolicitudesPrestamoEntrantes().Count();
+
+                            <li><a href="@Url.Action("Detalles", "Perfil", new { Id = perfil.Id })" class="texto-verde"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;@perfil.Nombre</a></li>
+                            <li class="dropdown dropdown-campana">
+                                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <span class="glyphicon glyphicon-bell icono">
+
+                                        @{
+                                            if (solicitudesEntrantes > 0)
+                                            {
+                                            <span class="badge badge-notify">
+                                                @solicitudesEntrantes
+                                            </span>
+                                            }
+                                        }
+                                    </span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-solicitudes" role="menu">
+                                    @{
+                                        List<Libros.Models.Prestamo> solicitudes = perfil.SolicitudesPrestamoEntrantes();
+                                        int i = 1;
+
+                                        if (solicitudes.Count() == 0)
+                                        {
+                                    <li><div><p class="text sin-solicitudes">No has recibido solicitudes</p></div></li>
+                                        }
+                                        else
+                                        {
+                                            foreach (var prestamo in solicitudes.Take(3))
+                                            {
+                                                <li class="item-contenedor" href="">
+                                                    <div class="media item-solicitud">
+                                                        <div class="media-left media-middle">
+                                                            <a href="@Url.Action("Detalles", "Prestamo", new { id = prestamo.Id })">
+                                                                <img class="media-object item-imagen" src="@Url.Content("~/Contents/img/" + prestamo.Item.UrlImagen)" alt="..">
+                                                            </a>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <p class="text-primary titulo-item-solicitud">@prestamo.Item.Titulo</p>
+                                                            <p class="text-primary nombre-solicitante">@prestamo.Receptor.Nombre</p>
+                                                        </div>
+                                                        <div class="media-right">
+                                                            <a class="btn btn-primary" href="@Url.Action("Detalles", "Prestamo", new { id = prestamo.Id })">Ver más</a>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                i++;
+                                            }
+                                        }
+
+
+                                    }
+
+                                    @{
+                                        if (solicitudes.Count() > 0)
+                                        {
+                                            <li class="divider divider-solicitudes"></li>
+                                            <li><a class="text-center ver-todas" href="@Url.Action("MisPrestamos", "Prestamo", new { Id = perfil.Id })"><strong>Ver todas</strong></a></li>
+                                        }
+                                    }
+                                    
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle texto-verde" data-toggle="dropdown" href="">
+                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="@Url.Action("Perfiles", "Cuenta")"> Cambiar perfil</a></li>
+                                    <li><a href="@Url.Action("CambiarPassword", "Cuenta")"> Cambiar Contraseña</a></li>
+                                    @{
+                                        <li><a href="@Url.Action("MisSolicitudes", "Prestamo")">Mis solicitudes</a></li>
+                                        <li><a href="@Url.Action("MisPrestamos", "Prestamo")"> Mis prestamos</a></li>                                        
+                                    }
+                                    <li>
+                                        <a href="@Url.Action("Salir", "Cuenta")">Salir</a>
+                                    </li>
+                                </ul>
+                            </li>
+                                            }
+                                            else
+                                            {
+                                                <li><a href="@Url.Action("Salir", "Cuenta")" class="text-danger"> <i class="fa fa-times"></i> Salir</a></li>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <li><a href="@Url.Action("Ingresar", "Cuenta")">Ingresar</a></li>
+                                        }
+                }
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid navbar-search">
+    <div class="row">
+        <div class="cosa col-md-6 col-md-offset-3">
+            @using (Html.BeginForm("Busqueda", "Home", FormMethod.Get))
+            {
+                <div class="input-group">
+                    <input type="hidden" value="@ViewBag.Page" name="page" />
+                    <input type="hidden" value="@ViewBag.Results" name="cantResult" />
+                    <input type="hidden" value="@ViewBag.Filtro" name="filtro" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="filtros" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="fa fa-reorder"></i> <span class="caret"></span></button>
+                        <ul class="dropdown-menu" aria-labelledby="filtros">
+                            <li><a href="@Url.Action("Busqueda", "Home", new { page = ViewBag.Page , cantResult = ViewBag.Results, filtro = 1, buscar= ViewBag.Termino } )">Por Titulo</a></li>
+                            <li><a href="@Url.Action("Busqueda", "Home", new { page = ViewBag.Page , cantResult = ViewBag.Results, filtro = 2, buscar= ViewBag.Termino })">Por Autor</a></li>
+                            <li><a href="@Url.Action("Busqueda", "Home", new { page = ViewBag.Page , cantResult = ViewBag.Results, filtro = 3, buscar= ViewBag.Termino })">Por Propiedad</a></li>
+                            <li><a href="@Url.Action("Busqueda", "Home", new { page = ViewBag.Page , cantResult = ViewBag.Results, filtro = 4, buscar= ViewBag.Termino })">Ubicacion</a></li>
+                            <li><a href="@Url.Action("Busqueda", "Home", new { page = ViewBag.Page , cantResult = ViewBag.Results, filtro = 5, buscar= ViewBag.Termino })">All</a></li>
+                        </ul>
+                    </span>
+                    @Html.TextBox("buscar", null, new { @class = "form-control" })
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                    </span>
+
+                </div>
+            }
+        </div>
+    </div>
+</div>

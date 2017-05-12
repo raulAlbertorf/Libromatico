@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Trabajando con eventos de teclado en jQuery</title>
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script>
+function operaEvento(evento){
+   //$("#loescrito").html($("#loescrito").html() + evento.type + ": " + evento.which + ", ")
+    $("#loescrito").before($("#texto").val()+"<br/>")
+    
+}
+$(document).ready(function(){
+   //$(document).keypress(operaEvento);
+   //$(document).keydown(operaEvento);
+   //$(document).keyup(operaEvento);
+    $("#texto").keyup(operaEvento);
+})
+</script>
+
+</head>
+<body>
+<h1>Eventos de teclado en jQuery</h1>
+   <div id="loescrito"></div>
+    <input type="text" id="texto"/>
+    
+    
+    
+   <div>
+    <input id="main" type="text" />
+    <input id="autocomplete" type="text" disabled="disabled" />
+</div>
+    
+</body>
+</html> 

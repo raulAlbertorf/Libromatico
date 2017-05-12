@@ -1,0 +1,94 @@
+﻿@model Libros.Models.Estanteria
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@section Styles{
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="~/Contents/js/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="~/Contents/js/owl-carousel/owl.theme.css">
+
+    <!-- Index Layout -->
+    <link rel="stylesheet" href="~/Contents/css/index.css" />
+}
+
+@section Scripts{
+    <!-- Owl carousel -->
+    <script src="~/Contents/js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Contents/js/index.js"></script>
+    <script>
+        $(".navbar-search").hide();
+    </script>
+}
+
+<div class="container">
+    <div class="jumbotron fondo">
+        <div class="text-center">
+            <h1 class="title">¿Qué te gustaría leer?</h1>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8">
+                @using (Html.BeginForm("Busqueda", "Home", FormMethod.Get))
+                {
+                    <div class="input-group">
+                        @Html.TextBox("buscar", null, new { @class = "form-control input-lg", @placeholder = "Don Quijote de la Mancha ..." })
+                        <span class="input-group-btn">
+                            <button class="btn btn-default btn-lg" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </span>
+                    </div>
+                }
+            </div>
+        </div>
+        <br>
+        <br>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Últimos agregados</h4>
+                </div>
+                <div class="panel-body">
+                    <div id="owl-ultimos" class="owl-carousel owl-theme">
+                        @{
+                            var ult = Model.UltimosAgregados(10);
+                            foreach (var item in ult)
+                            {
+                                <div class="item">
+                                    <a href="@Url.Action("Detalles", "Item", new { id = item.Id })">
+                                        <img src="~/Contents/img/@item.UrlImagen" class="img-responsive">
+                                    </a>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-7">
+                <h2 class="featurette-heading letra-lobster">Da una nueva vida a ese libro viejo</h2>
+                <p class="lead">Tantos libros en tu casa olvidados, llenándose de polvo...</p>
+                <p class="lead">¿Por qué mejor no regalarlos y así fomentar la lectura?</p>
+            </div>
+            <div class="col-md-5">
+                <div style="background-color: white">
+                    <img class="img-responsive center-block img-thumbnail" src="~/Contents/img/cover/img2.jpg" alt="Generic placeholder image">
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-5">
+                <img class="img-responsive center-block img-thumbnail" src="~/Contents/img/cover/img1.jpg" alt="Generic placeholder image">
+            </div>
+            <div class="col-md-7">
+                <h2 class="featurette-heading letra-lobster">Libromatico una forma de leer nuevos libros</h2>
+                <p class="lead">Nuestro objetivo es ayudarte a compartir aquel viejo libro, así como también obtener uno nuevo para leer.</p>
+                <p class="lead"><big><a href="@Url.Action("Ingresar", "Cuenta")">Regístrate</a>, <a href="@Url.Action("Busqueda", "Home")">busca un libro</a> y comienza a leer!</big></p>
+            </div>
+        </div>
+</div>

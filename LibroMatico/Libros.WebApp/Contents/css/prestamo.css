@@ -1,0 +1,7 @@
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    color: #333;
+    background-color: #f7f7f9;
+}
+span.round-tabs {
+    border-radius: 100px !important;
+}

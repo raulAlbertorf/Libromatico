@@ -1,0 +1,75 @@
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\csc.exe
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\vbc.exe
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\Libros.WebApp.dll.config
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\Libros.WebApp.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\Libros.WebApp.pdb
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Helpers.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Mvc.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Razor.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.Razor.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Razor.xml
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.xml
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.Razor.xml
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Helpers.xml
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Mvc.xml
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\obj\Debug\Libros.WebApp.csprojResolveAssemblyReference.cache
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\obj\Debug\Libros.WebApp.dll
+C:\Users\Alex\Desktop\devel\trunk\LibroMatico\Libros.WebApp\obj\Debug\Libros.WebApp.pdb
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\csc.exe
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\vbc.exe
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\VBCSCompiler.exe
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\Libros.WebApp.dll.config
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\Libros.WebApp.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\Libros.WebApp.pdb
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\Libros.Models.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\log4net.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\PagedList.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\PagedList.Mvc.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Helpers.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Mvc.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Razor.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.Deployment.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.Razor.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\MySql.Data.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\Libros.Models.pdb
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\PagedList.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\PagedList.Mvc.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Razor.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.Deployment.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Webpages.Razor.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Helpers.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\System.Web.Mvc.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\bin\MySql.Data.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\obj\Debug\Libros.WebApp.csprojResolveAssemblyReference.cache
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\obj\Debug\Libros.WebApp.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.WebApp\obj\Debug\Libros.WebApp.pdb

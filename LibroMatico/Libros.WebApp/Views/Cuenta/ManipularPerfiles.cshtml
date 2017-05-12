@@ -1,0 +1,120 @@
+﻿@model Libros.Models.Cuenta
+
+@{
+    ViewBag.Title = "Modificar Perfiles";
+    Layout = "~/Views/_Layout.cshtml";
+}
+@section Styles{
+    <link rel="stylesheet" href="~/Contents/css/cuenta.css" />
+    <link rel="stylesheet" href="~/Contents/css/circleButton.css" />
+    <link rel="stylesheet" href="~/Contents/css/CountrySelector/countrySelect.css">
+}
+@section Scripts {
+    <script type="text/javascript" src="~/Contents/js/bootstrap-confirmation.js"></script>
+    <script type="text/javascript" src="~/Contents/js/PerfilModal.js"></script>
+    <script type="text/javascript" src="~/Contents/js/sinBuscar.js"></script>
+    <script type="text/javascript" src="~/Contents/js/CountrySelector/countrySelect.js"></script>
+    <script>
+		$("#country_selector").countrySelect({
+			defaultCountry: "cl",
+			preferredCountries: ['cl', 'us', 'mx']
+		});
+    </script>
+}
+
+<div class="container">
+    <div id="list-perfil">
+        <br>
+        <div class="text-center titulo">
+            <h2>Modifica tu perfil</h2>
+            <br />
+        </div>
+        <div class="container">
+            <div class="row row-centered">
+                @{
+                    var perfiles = Model.Perfiles();
+                    foreach (var p in perfiles)
+                    {
+                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-2 col-centered">
+                            <div class="box fade">
+
+                                <div class="img-wrapper">
+                                    <img class="img-responsive img-perfil" src="@Url.Content( "~/Contents/img/" + p.UrlImagen )">
+                                    <div class="img-overlay">
+                                        <a class="btn btn-success btn-circle btn-xl" id="modificarPerfil" onclick="modificarPerfil(@p.Id);">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                        </a>
+                                        <a class="btn btn-prymary btn-circle btn-xs" onclick="eliminarPerfil(@p.Id);">
+                                            <i class="glyphicon glyphicon-minus-sign"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="caption">
+                                    <p class="text-center titulo-perfiles">@p.Nombre</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    if (perfiles.Count < 5)
+                    {
+                        <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-centered">
+                            <div class="box fade">
+                                <a href="#" data-toggle="modal" data-target="#RegistroModal">
+                                    <img class="img-responsive img-perfil" style="height:60px; width:60px; margin-bottom:45px;" src="@Url.Content("~/Contents/img/plus.png")">
+                                </a>
+                                <div class="caption">
+                                    <p class="text-center titulo-perfiles">Nuevo Perfil</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="row row-centered" style="margin-top:20px;">
+                <a class="btn btn-default" href="@Url.Action("Perfiles", "Cuenta")">Terminar</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="RegistroModal" class="modal" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Nuevo Perfil</h4>
+            </div>
+            @using (Html.BeginForm("Crear", "Perfil", FormMethod.Post))
+            {
+                <div class="modal-body">
+                    <p>Ingrese sus datos a continuación para registrarse.</p>
+
+                    <div class="form-group">
+                        <label for="Nombre">Nombre:</label>
+                        <input class="form-control" name="Nombre" placeholder="su Nombre" maxlength="50" type="text" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Nacionalidad">Nacionalidad:</label>
+                        <input class="form-control" id="country_selector" name="Nacionalidad" maxlength="50" type="text" required>
+                    </div>
+                    <div>
+                        <label for="ciudad">Ubicación:</label>
+                        <input class="form-control" name="ciudad" placeholder="Ingrese ciudad" type="text" maxlength="50" value="@Libros.WebApp.Utils.GeoLocation.ciudad(Libros.WebApp.Utils.GeoLocation.ubicacion())">
+                    </div>
+                    <input class="form-control" name="Email" placeholder="Su contraseña" type="hidden" value="@Model.Email">
+                    <input class="form-control" name="UrlImagen" placeholder="Su contraseña" type="hidden" value="@Url.Content("PICON_029.png")">
+
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-primary" value="Registrame" type="submit" />
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+
+<div id="PartialModal" class="modal" role="dialog"></div>

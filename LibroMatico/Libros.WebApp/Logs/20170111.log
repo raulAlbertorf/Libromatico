@@ -1,0 +1,727 @@
+2017-01-11 00:04:45,141 [1] INFO Libromatico - Aplicación Iniciada
+2017-01-11 00:05:04,751 [5] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2017-01-11 00:05:07,319 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:05:07,397 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-01-11 00:05:07,461 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2017-01-11 00:05:07,498 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-01-11 00:05:07,558 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-01-11 00:05:07,615 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-01-11 00:05:07,716 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2017-01-11 00:05:07,758 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-01-11 00:05:07,788 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 1 - Titulo: Harry Potter y la Piedra Filosofal
+2017-01-11 00:05:07,825 [5] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados
+2017-01-11 00:06:15,070 [6] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino:  - Paguina: 1 - CantResult: 10
+2017-01-11 00:06:15,167 [6] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 1 - Propietario: 1 - Titulo: Harry Potter y la Piedra Filosofal
+2017-01-11 00:06:15,176 [6] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-01-11 00:06:15,193 [6] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-01-11 00:06:15,207 [6] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-01-11 00:06:15,241 [6] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-01-11 00:06:15,272 [6] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:06:15,288 [6] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-01-11 00:06:19,239 [6] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2017-01-11 00:06:19,263 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:06:19,284 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-01-11 00:06:19,324 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2017-01-11 00:06:19,354 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-01-11 00:06:19,372 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-01-11 00:06:19,399 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-01-11 00:06:19,436 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2017-01-11 00:06:19,475 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-01-11 00:06:19,498 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 1 - Titulo: Harry Potter y la Piedra Filosofal
+2017-01-11 00:06:19,542 [6] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados
+2017-01-11 00:06:50,866 [5] INFO Libromatico - Info: Comienza Metodo: Cuenta.InicioSesion - Parametros: Email: email1@mail.cl
+2017-01-11 00:06:50,889 [5] INFO Libromatico - Info: Termina Metodo: Cuenta.IniciarSesion
+2017-01-11 00:06:55,902 [5] INFO Libromatico - Info: Comienza Metodo: Cuenta.InicioSesion - Parametros: Email: email1@mail.cl
+2017-01-11 00:06:55,927 [5] INFO Libromatico - Info: Cuenta.IniciarSesion - Result: True
+2017-01-11 00:06:55,937 [5] INFO Libromatico - Info: Termina Metodo: Cuenta.IniciarSesion
+2017-01-11 00:06:55,952 [5] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-01-11 00:06:55,989 [5] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-01-11 00:06:56,005 [5] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-01-11 00:06:56,052 [5] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-01-11 00:06:56,073 [5] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-01-11 00:06:56,073 [5] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-01-11 00:06:56,105 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:06:56,136 [5] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:06:56,152 [5] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:06:56,177 [5] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:06:56,186 [5] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:06:56,202 [5] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:06:56,210 [5] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:06:56,221 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:06:56,243 [5] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:06:56,267 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:06:56,284 [5] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:06:59,605 [6] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-01-11 00:06:59,623 [6] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-01-11 00:06:59,641 [6] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-01-11 00:06:59,758 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:06:59,788 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:06:59,803 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:06:59,856 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:06:59,880 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:06:59,891 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:06:59,902 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:06:59,921 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:06:59,942 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:06:59,958 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:06:59,974 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:06:59,993 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:00,022 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:00,037 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:15,086 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:15,119 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:15,137 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:15,157 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:15,165 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:15,177 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:15,189 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:15,211 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.MisItems - Parametros: 
+2017-01-11 00:07:15,229 [8] INFO Libromatico - Info: Perfil.MisItems - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta - EsPrestable: True
+2017-01-11 00:07:15,244 [8] INFO Libromatico - Info: Perfil.MisItems - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas - EsPrestable: False
+2017-01-11 00:07:15,259 [8] INFO Libromatico - Info: Perfil.MisItems - Result: Item: Id: 1 - Propietario: 1 - Titulo: Harry Potter y la Piedra Filosofal - EsPrestable: True
+2017-01-11 00:07:15,271 [8] INFO Libromatico - Info: Termina Metodo: Perfil.MisItems
+2017-01-11 00:07:15,293 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:07:15,317 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:07:15,328 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:07:15,346 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:15,359 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:15,376 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:15,392 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:15,408 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:15,454 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:15,466 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:15,478 [8] INFO Libromatico - Info: Comienza Metodo: Item.Prestamo_Id_Item - Parametros: Id: 1
+2017-01-11 00:07:15,528 [8] INFO Libromatico - Info: Termina Metodo: Item.Prestamo_Id_Item
+2017-01-11 00:07:15,544 [8] INFO Libromatico - Info: Comienza Metodo: Prestamo.Seleccionar - Parametros: Id: 0
+2017-01-11 00:07:15,568 [8] INFO Libromatico - Info: Termina Metodo: Prestamo.Seleccionar
+2017-01-11 00:07:15,582 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:07:15,602 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 7
+2017-01-11 00:07:15,610 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 1
+2017-01-11 00:07:15,625 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:07:15,641 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:15,654 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:15,664 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:15,677 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:15,695 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:15,725 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:15,763 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:15,786 [8] INFO Libromatico - Info: Comienza Metodo: Item.Prestamo_Id_Item - Parametros: Id: 1
+2017-01-11 00:07:15,823 [8] INFO Libromatico - Info: Termina Metodo: Item.Prestamo_Id_Item
+2017-01-11 00:07:15,868 [8] INFO Libromatico - Info: Comienza Metodo: Prestamo.Seleccionar - Parametros: Id: 0
+2017-01-11 00:07:15,889 [8] INFO Libromatico - Info: Termina Metodo: Prestamo.Seleccionar
+2017-01-11 00:07:15,900 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:07:15,922 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:07:15,935 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:07:15,951 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:15,968 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:15,982 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:15,996 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:16,020 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:16,031 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:16,045 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:16,059 [8] INFO Libromatico - Info: Comienza Metodo: Item.Prestamo_Id_Item - Parametros: Id: 1
+2017-01-11 00:07:16,072 [8] INFO Libromatico - Info: Termina Metodo: Item.Prestamo_Id_Item
+2017-01-11 00:07:16,079 [8] INFO Libromatico - Info: Comienza Metodo: Prestamo.Seleccionar - Parametros: Id: 0
+2017-01-11 00:07:16,100 [8] INFO Libromatico - Info: Termina Metodo: Prestamo.Seleccionar
+2017-01-11 00:07:16,377 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:16,416 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:16,428 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:16,439 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:16,449 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:16,458 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:16,468 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:16,480 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:07:16,491 [8] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:07:16,501 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:07:16,516 [8] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:07:30,386 [5] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 5
+2017-01-11 00:07:30,428 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:30,441 [5] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:30,453 [5] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:30,470 [5] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:30,478 [5] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:30,503 [5] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:30,539 [5] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:30,552 [5] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-01-11 00:07:30,567 [5] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:07:30,586 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.Disponibilidad - Parametros: Item: Id: 5 - Propietario: 1 - Titulo: No subas - Disponibilidad: True
+2017-01-11 00:07:30,705 [5] INFO Libromatico - Info: Perfil.Disponibilidad - Result: True
+2017-01-11 00:07:30,719 [5] INFO Libromatico - Info: Termina Metodo: Perfil.Disponibilidad
+2017-01-11 00:07:31,325 [6] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 5
+2017-01-11 00:07:31,341 [6] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:31,341 [6] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:31,360 [6] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:31,362 [6] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:31,378 [6] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:31,378 [6] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:31,394 [6] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:31,409 [6] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-01-11 00:07:31,409 [6] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:07:31,425 [6] INFO Libromatico - Info: Comienza Metodo: Perfil.Disponibilidad - Parametros: Item: Id: 5 - Propietario: 1 - Titulo: No subas - Disponibilidad: False
+2017-01-11 00:07:31,620 [6] INFO Libromatico - Info: Perfil.Disponibilidad - Result: True
+2017-01-11 00:07:31,642 [6] INFO Libromatico - Info: Termina Metodo: Perfil.Disponibilidad
+2017-01-11 00:07:32,984 [5] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:07:33,030 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:33,055 [5] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:33,074 [5] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:33,096 [5] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:33,137 [5] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:33,166 [5] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:33,183 [5] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:33,194 [5] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:07:33,212 [5] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:07:33,229 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.Disponibilidad - Parametros: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta - Disponibilidad: False
+2017-01-11 00:07:33,517 [5] INFO Libromatico - Info: Perfil.Disponibilidad - Result: True
+2017-01-11 00:07:33,530 [5] INFO Libromatico - Info: Termina Metodo: Perfil.Disponibilidad
+2017-01-11 00:07:34,213 [6] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:07:34,228 [6] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:34,228 [6] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:34,244 [6] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:34,260 [6] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:34,275 [6] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:34,291 [6] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:34,313 [6] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:34,328 [6] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:07:34,344 [6] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:07:34,359 [6] INFO Libromatico - Info: Comienza Metodo: Perfil.Disponibilidad - Parametros: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta - Disponibilidad: True
+2017-01-11 00:07:34,426 [6] INFO Libromatico - Info: Perfil.Disponibilidad - Result: True
+2017-01-11 00:07:34,443 [6] INFO Libromatico - Info: Termina Metodo: Perfil.Disponibilidad
+2017-01-11 00:07:35,438 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:35,457 [5] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:35,515 [5] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:35,562 [5] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:35,572 [5] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:35,593 [5] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:35,611 [5] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:35,628 [5] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:07:35,656 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:35,673 [5] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:35,689 [5] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:35,707 [5] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:35,719 [5] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:35,732 [5] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:35,744 [5] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:35,758 [5] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:07:35,784 [5] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:07:51,956 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:51,976 [5] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:51,989 [5] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:52,001 [5] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:52,011 [5] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:52,023 [5] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:52,036 [5] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:52,048 [5] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:07:52,060 [5] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:07:52,074 [5] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:07:52,089 [5] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:07:52,100 [5] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:07:52,109 [5] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:07:52,124 [5] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:07:52,136 [5] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:07:52,151 [5] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:07:52,161 [5] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:07:52,176 [5] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:07:52,195 [5] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:07:52,207 [5] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:07:52,224 [5] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:07:52,234 [5] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:07:52,255 [5] INFO Libromatico - Info: Comienza Metodo: Autor.Buscar_Autores - Parametros: Nombre: 
+2017-01-11 00:07:52,296 [5] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 2
+2017-01-11 00:07:52,304 [5] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 5
+2017-01-11 00:07:52,317 [5] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 8
+2017-01-11 00:07:52,326 [5] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 7
+2017-01-11 00:07:52,341 [5] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 3
+2017-01-11 00:07:52,355 [5] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 6
+2017-01-11 00:07:52,373 [5] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 9
+2017-01-11 00:07:52,385 [5] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 4
+2017-01-11 00:07:52,421 [5] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 1
+2017-01-11 00:07:52,450 [5] INFO Libromatico - Info: Termina Metodo: Autor.Buscar_Autores
+2017-01-11 00:07:52,495 [5] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:07:52,523 [5] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:07:52,533 [5] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:07:52,546 [5] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:07:52,556 [5] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:07:52,571 [5] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:07:52,585 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.ReputacionPrestamista - Parametros: 
+2017-01-11 00:07:52,664 [5] INFO Libromatico - Info: Perfil.ReputacionPrestamista - Result: Reputacion: 2
+2017-01-11 00:07:52,728 [5] INFO Libromatico - Info: Termina Metodo: Perfil.ReputacionPrestamista
+2017-01-11 00:07:52,784 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:52,805 [5] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:07:52,811 [5] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:07:52,824 [5] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:07:52,839 [5] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:07:52,853 [5] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:07:52,866 [5] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:07:52,878 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:07:52,894 [5] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:07:52,905 [5] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:07:52,930 [5] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:08:37,006 [8] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:08:37,022 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:37,053 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:37,069 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:37,110 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:37,132 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:37,179 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:37,205 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:37,239 [8] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:08:37,269 [8] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:08:37,386 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:37,396 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:37,407 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:37,420 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:37,440 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:37,469 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:37,479 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:37,492 [8] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:08:37,506 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:37,518 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:37,535 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:37,550 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:37,567 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:37,580 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:37,598 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:37,612 [8] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:08:37,626 [8] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:08:37,640 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:37,653 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:37,669 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:37,680 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:37,691 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:37,704 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:37,716 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:37,729 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:37,743 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:37,753 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:37,767 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:37,779 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:37,791 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:37,807 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:37,827 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:37,853 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:37,868 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:37,895 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:37,909 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:37,922 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:37,935 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:37,945 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:37,957 [8] INFO Libromatico - Info: Comienza Metodo: Autor.Buscar_Autores - Parametros: Nombre: 
+2017-01-11 00:08:37,971 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 2
+2017-01-11 00:08:37,979 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 5
+2017-01-11 00:08:37,991 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 8
+2017-01-11 00:08:38,003 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 7
+2017-01-11 00:08:38,012 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 3
+2017-01-11 00:08:38,024 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 6
+2017-01-11 00:08:38,039 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 9
+2017-01-11 00:08:38,053 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 4
+2017-01-11 00:08:38,062 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 1
+2017-01-11 00:08:38,075 [8] INFO Libromatico - Info: Termina Metodo: Autor.Buscar_Autores
+2017-01-11 00:08:38,089 [8] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:08:38,099 [8] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:08:38,112 [8] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:08:38,124 [8] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:08:38,143 [8] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:08:38,194 [8] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:08:38,204 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.ReputacionPrestamista - Parametros: 
+2017-01-11 00:08:38,219 [8] INFO Libromatico - Info: Perfil.ReputacionPrestamista - Result: Reputacion: 2
+2017-01-11 00:08:38,228 [8] INFO Libromatico - Info: Termina Metodo: Perfil.ReputacionPrestamista
+2017-01-11 00:08:38,244 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:38,276 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:38,309 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:38,366 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:38,397 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:38,410 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:38,426 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:38,440 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:08:38,453 [8] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:08:38,463 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:08:38,474 [8] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:08:49,307 [8] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:08:49,317 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:49,328 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:49,338 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:49,355 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:49,366 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:49,389 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:49,492 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:49,509 [8] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:08:49,521 [8] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:08:49,635 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:49,649 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:49,658 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:49,675 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:49,685 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:49,696 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:49,706 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:49,714 [8] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:08:49,725 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:49,740 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:49,750 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:49,761 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:49,772 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:49,784 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:49,792 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:49,801 [8] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:08:49,814 [8] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:08:49,843 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:49,863 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:49,877 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:49,896 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:49,908 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:49,920 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:49,929 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:49,939 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:49,951 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:49,960 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:49,972 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:49,984 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:49,992 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:50,029 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:50,041 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:50,052 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:50,064 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:50,077 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:50,086 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:50,096 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:08:50,109 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:08:50,124 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:08:50,135 [8] INFO Libromatico - Info: Comienza Metodo: Autor.Buscar_Autores - Parametros: Nombre: 
+2017-01-11 00:08:50,154 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 2
+2017-01-11 00:08:50,169 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 5
+2017-01-11 00:08:50,182 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 8
+2017-01-11 00:08:50,195 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 7
+2017-01-11 00:08:50,220 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 3
+2017-01-11 00:08:50,230 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 6
+2017-01-11 00:08:50,246 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 9
+2017-01-11 00:08:50,257 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 4
+2017-01-11 00:08:50,268 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 1
+2017-01-11 00:08:50,278 [8] INFO Libromatico - Info: Termina Metodo: Autor.Buscar_Autores
+2017-01-11 00:08:50,290 [8] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:08:50,327 [8] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:08:50,350 [8] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:08:50,370 [8] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:08:50,377 [8] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:08:50,390 [8] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:08:50,401 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.ReputacionPrestamista - Parametros: 
+2017-01-11 00:08:50,421 [8] INFO Libromatico - Info: Perfil.ReputacionPrestamista - Result: Reputacion: 2
+2017-01-11 00:08:50,428 [8] INFO Libromatico - Info: Termina Metodo: Perfil.ReputacionPrestamista
+2017-01-11 00:08:50,460 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:50,473 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:08:50,488 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:08:50,504 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:08:50,517 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:08:50,529 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:08:50,540 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:08:50,557 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:08:50,569 [8] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:08:50,578 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:08:50,590 [8] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:09:31,620 [8] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:09:31,649 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:31,659 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:09:31,674 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:31,690 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:09:31,706 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:09:31,722 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:09:31,752 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:09:31,773 [8] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:09:31,783 [8] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:09:31,850 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:31,861 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:09:31,870 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:31,885 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:09:31,896 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:09:31,905 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:09:31,920 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:09:31,929 [8] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:09:31,940 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:31,948 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:09:31,970 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:31,984 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:09:32,005 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:09:32,030 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:09:32,047 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:09:32,068 [8] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:09:32,076 [8] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:09:32,086 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:32,095 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:09:32,103 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:32,127 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:09:32,139 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:09:32,147 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:09:32,158 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:09:32,176 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:09:32,190 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:09:32,202 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:09:32,217 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:09:32,228 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:09:32,241 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:09:32,254 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:09:32,268 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:09:32,276 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:09:32,288 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:09:32,301 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:09:32,317 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:09:32,327 [8] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:09:32,344 [8] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:09:32,378 [8] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:09:32,395 [8] INFO Libromatico - Info: Comienza Metodo: Autor.Buscar_Autores - Parametros: Nombre: 
+2017-01-11 00:09:32,426 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 2
+2017-01-11 00:09:32,436 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 5
+2017-01-11 00:09:32,452 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 8
+2017-01-11 00:09:32,470 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 7
+2017-01-11 00:09:32,484 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 3
+2017-01-11 00:09:32,501 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 6
+2017-01-11 00:09:32,513 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 9
+2017-01-11 00:09:32,530 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 4
+2017-01-11 00:09:32,545 [8] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 1
+2017-01-11 00:09:32,557 [8] INFO Libromatico - Info: Termina Metodo: Autor.Buscar_Autores
+2017-01-11 00:09:32,570 [8] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:09:32,591 [8] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:09:32,602 [8] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:09:32,614 [8] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:09:32,630 [8] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:09:32,652 [8] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:09:32,673 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.ReputacionPrestamista - Parametros: 
+2017-01-11 00:09:32,692 [8] INFO Libromatico - Info: Perfil.ReputacionPrestamista - Result: Reputacion: 2
+2017-01-11 00:09:32,711 [8] INFO Libromatico - Info: Termina Metodo: Perfil.ReputacionPrestamista
+2017-01-11 00:09:32,738 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:32,752 [8] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:09:32,764 [8] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:09:32,781 [8] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:09:32,797 [8] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:09:32,810 [8] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:09:32,826 [8] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:09:32,838 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:09:32,859 [8] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:09:32,868 [8] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:09:32,879 [8] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:10:05,359 [11] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:10:05,398 [11] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:05,412 [11] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:05,428 [11] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:05,447 [11] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:05,459 [11] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:05,471 [11] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:05,495 [11] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:05,506 [11] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:10:05,516 [11] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:10:05,562 [11] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:05,588 [11] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:05,609 [11] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:05,626 [11] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:05,636 [11] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:05,645 [11] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:05,657 [11] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:05,675 [11] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 9
+2017-01-11 00:10:05,697 [11] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:05,713 [11] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:05,724 [11] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:05,752 [11] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:05,761 [11] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:05,775 [11] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:05,784 [11] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:05,793 [11] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-01-11 00:10:05,803 [11] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:10:05,813 [11] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:05,824 [11] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:05,833 [11] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:05,848 [11] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:05,860 [11] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:05,872 [11] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:05,885 [11] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:05,896 [11] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:05,906 [11] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:10:05,918 [11] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:05,931 [11] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:05,947 [11] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:10:05,960 [11] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:05,984 [11] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:06,007 [11] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:10:06,018 [11] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:06,044 [11] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:06,061 [11] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:10:06,070 [11] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:06,078 [11] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:06,089 [11] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:10:06,098 [11] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:06,110 [11] INFO Libromatico - Info: Comienza Metodo: Autor.Buscar_Autores - Parametros: Nombre: 
+2017-01-11 00:10:06,124 [11] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 2
+2017-01-11 00:10:06,139 [11] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 5
+2017-01-11 00:10:06,152 [11] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 8
+2017-01-11 00:10:06,170 [11] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 7
+2017-01-11 00:10:06,181 [11] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 3
+2017-01-11 00:10:06,197 [11] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 6
+2017-01-11 00:10:06,214 [11] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 9
+2017-01-11 00:10:06,230 [11] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 4
+2017-01-11 00:10:06,243 [11] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 1
+2017-01-11 00:10:06,265 [11] INFO Libromatico - Info: Termina Metodo: Autor.Buscar_Autores
+2017-01-11 00:10:06,282 [11] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:10:06,301 [11] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:10:06,309 [11] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:10:06,337 [11] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:10:06,351 [11] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:10:06,372 [11] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:10:06,393 [11] INFO Libromatico - Info: Comienza Metodo: Perfil.ReputacionPrestamista - Parametros: 
+2017-01-11 00:10:06,429 [11] INFO Libromatico - Info: Perfil.ReputacionPrestamista - Result: Reputacion: 2
+2017-01-11 00:10:06,468 [11] INFO Libromatico - Info: Termina Metodo: Perfil.ReputacionPrestamista
+2017-01-11 00:10:06,496 [11] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:06,507 [11] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:06,529 [11] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:06,552 [11] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:06,573 [11] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:06,581 [11] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:06,591 [11] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:06,608 [11] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:10:06,634 [11] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:10:06,654 [11] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:10:06,672 [11] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:10:15,498 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:15,500 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:15,516 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:15,531 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:15,531 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:15,547 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:15,547 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:15,562 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:15,578 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:15,594 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:15,607 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:15,619 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:15,629 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:15,645 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:15,658 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:15,668 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:15,682 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:15,693 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:15,709 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:15,722 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:15,742 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:15,757 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.MisItems - Parametros: 
+2017-01-11 00:10:15,775 [9] INFO Libromatico - Info: Perfil.MisItems - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta - EsPrestable: True
+2017-01-11 00:10:15,789 [9] INFO Libromatico - Info: Perfil.MisItems - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas - EsPrestable: False
+2017-01-11 00:10:15,804 [9] INFO Libromatico - Info: Perfil.MisItems - Result: Item: Id: 1 - Propietario: 1 - Titulo: Harry Potter y la Piedra Filosofal - EsPrestable: True
+2017-01-11 00:10:15,820 [9] INFO Libromatico - Info: Termina Metodo: Perfil.MisItems
+2017-01-11 00:10:15,831 [9] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:15,848 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:10:15,857 [9] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:15,865 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:15,875 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:15,885 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:15,895 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:15,907 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:15,915 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:15,927 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:15,944 [9] INFO Libromatico - Info: Comienza Metodo: Item.Prestamo_Id_Item - Parametros: Id: 1
+2017-01-11 00:10:15,960 [9] INFO Libromatico - Info: Termina Metodo: Item.Prestamo_Id_Item
+2017-01-11 00:10:15,970 [9] INFO Libromatico - Info: Comienza Metodo: Prestamo.Seleccionar - Parametros: Id: 0
+2017-01-11 00:10:15,989 [9] INFO Libromatico - Info: Termina Metodo: Prestamo.Seleccionar
+2017-01-11 00:10:16,009 [9] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:16,020 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 7
+2017-01-11 00:10:16,029 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 1
+2017-01-11 00:10:16,043 [9] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:16,059 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:16,075 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:16,092 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:16,107 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:16,119 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:16,128 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:16,142 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:16,154 [9] INFO Libromatico - Info: Comienza Metodo: Item.Prestamo_Id_Item - Parametros: Id: 1
+2017-01-11 00:10:16,170 [9] INFO Libromatico - Info: Termina Metodo: Item.Prestamo_Id_Item
+2017-01-11 00:10:16,187 [9] INFO Libromatico - Info: Comienza Metodo: Prestamo.Seleccionar - Parametros: Id: 0
+2017-01-11 00:10:16,202 [9] INFO Libromatico - Info: Termina Metodo: Prestamo.Seleccionar
+2017-01-11 00:10:16,220 [9] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:16,244 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-01-11 00:10:16,256 [9] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:16,271 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:16,290 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:16,298 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:16,324 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:16,342 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:16,355 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:16,370 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:16,387 [9] INFO Libromatico - Info: Comienza Metodo: Item.Prestamo_Id_Item - Parametros: Id: 1
+2017-01-11 00:10:16,412 [9] INFO Libromatico - Info: Termina Metodo: Item.Prestamo_Id_Item
+2017-01-11 00:10:16,422 [9] INFO Libromatico - Info: Comienza Metodo: Prestamo.Seleccionar - Parametros: Id: 0
+2017-01-11 00:10:16,434 [9] INFO Libromatico - Info: Termina Metodo: Prestamo.Seleccionar
+2017-01-11 00:10:16,461 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:16,492 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:16,504 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:16,521 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:16,534 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:16,552 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:16,566 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:16,579 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:10:16,592 [9] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:10:16,609 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:10:16,624 [9] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:10:18,771 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:18,787 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:18,809 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:18,828 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:18,851 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:18,859 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:18,945 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:19,004 [9] INFO Libromatico - Info: Comienza Metodo: Item.Seleccionar - Parametros: Id: 5
+2017-01-11 00:10:19,041 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:19,051 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:19,059 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:19,075 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:19,113 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:19,227 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:19,248 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:19,276 [9] INFO Libromatico - Info: Item.Seleccionar - Result: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-01-11 00:10:19,298 [9] INFO Libromatico - Info: Termina Metodo: Item.Seleccionar
+2017-01-11 00:10:19,348 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:19,377 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:19,397 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:19,419 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:19,439 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:19,456 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:19,480 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:19,497 [9] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:19,540 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 7
+2017-01-11 00:10:19,548 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 1
+2017-01-11 00:10:19,559 [9] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:19,569 [9] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:19,579 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 7
+2017-01-11 00:10:19,590 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 1
+2017-01-11 00:10:19,598 [9] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:19,611 [9] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-01-11 00:10:19,631 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 7
+2017-01-11 00:10:19,659 [9] INFO Libromatico - Info: Item.Autores - Result: Id: 1
+2017-01-11 00:10:19,668 [9] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-01-11 00:10:19,676 [9] INFO Libromatico - Info: Comienza Metodo: Autor.Buscar_Autores - Parametros: Nombre: 
+2017-01-11 00:10:19,695 [9] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 2
+2017-01-11 00:10:19,704 [9] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 5
+2017-01-11 00:10:19,712 [9] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 8
+2017-01-11 00:10:19,722 [9] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 7
+2017-01-11 00:10:19,737 [9] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 3
+2017-01-11 00:10:19,756 [9] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 6
+2017-01-11 00:10:19,769 [9] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 9
+2017-01-11 00:10:19,781 [9] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 4
+2017-01-11 00:10:19,794 [9] INFO Libromatico - Info: Autor.Buscar_Autores - Result: Id: 1
+2017-01-11 00:10:19,819 [9] INFO Libromatico - Info: Termina Metodo: Autor.Buscar_Autores
+2017-01-11 00:10:19,836 [9] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:10:19,846 [9] INFO Libromatico - Info: Item.Propiedades - Result: Key: Anio - Value: 1999
+2017-01-11 00:10:19,856 [9] INFO Libromatico - Info: Item.Propiedades - Result: Key: Categoría - Value: Terror
+2017-01-11 00:10:19,869 [9] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:10:19,881 [9] INFO Libromatico - Info: Comienza Metodo: Item.Propiedades - Parametros: 
+2017-01-11 00:10:19,895 [9] INFO Libromatico - Info: Item.Propiedades - Result: Key: Anio - Value: 1999
+2017-01-11 00:10:19,907 [9] INFO Libromatico - Info: Item.Propiedades - Result: Key: Categoría - Value: Terror
+2017-01-11 00:10:19,930 [9] INFO Libromatico - Info: Termina Metodo: Item.Propiedades
+2017-01-11 00:10:19,955 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.ReputacionPrestamista - Parametros: 
+2017-01-11 00:10:19,998 [9] INFO Libromatico - Info: Perfil.ReputacionPrestamista - Result: Reputacion: 2
+2017-01-11 00:10:20,007 [9] INFO Libromatico - Info: Termina Metodo: Perfil.ReputacionPrestamista
+2017-01-11 00:10:20,036 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:20,054 [9] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-01-11 00:10:20,063 [9] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-01-11 00:10:20,078 [9] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-01-11 00:10:20,095 [9] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-01-11 00:10:20,117 [9] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-01-11 00:10:20,136 [9] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-01-11 00:10:20,153 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:10:20,171 [9] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-01-11 00:10:20,180 [9] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-01-11 00:10:20,196 [9] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes

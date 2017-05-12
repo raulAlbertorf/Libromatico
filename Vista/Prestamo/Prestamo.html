@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>LibroMatico</title>
+
+    <!-- CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/post.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      * {
+        border-radius: 0 !important;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">LibroMatico</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Inicio</a></li>
+              <li><a href="#">Buscar</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <span class="glyphicon glyphicon-user"></span> Cuenta
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Registrar</a></li>
+                  <li><a href="#">Recuperar Contraseña</a></li> 
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <ol class="breadcrumb" style="margin-top:50px;">
+        <li><a href="#">Inicio</a></li>
+        <li class="active">Prestamo</li>
+      </ol>
+      
+      <div class="container">
+        <div class="col-sm-3 col-md-3"> 
+          <div class="thumbnail panel-shadow"> 
+            <img alt="item_image" src="../Images/image1.svg"> 
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-default panel-shadow">
+            <div class="panel-heading">
+              <h2 class="panel-title">Interfaz Humano Computador</h2>
+            </div>
+            <div class="panel-body">
+              <p><strong>Autor:</strong> Narciso Cerpa</p>
+              <p><strong>Categoría:</strong> Paper de Investigación</p>
+              <p><strong>ISBN-10:</strong> 9562621898</p>
+              <p><strong>Lenguaje:</strong> Español</p>
+            </div>
+            <div class="panel-footer">
+              <p><strong>Estado de Prestamo </strong> <span class="label label-info">En Transito</span></p>
+              <p><strong>Fecha de Envío </strong> 09/10/2016</p>
+              <p><strong>Fecha de Recepción </strong> 10/10/2016</p>
+              <p><strong>Fecha de Expiración </strong> 10/11/2016</p>
+              <p><strong>Fecha Última Modificación </strong> 19/10/2016</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-3"> 
+          <div class="panel panel-default panel-shadow">
+            <div class="panel-heading">
+              <h3 class="panel-title">Propietario</h3>
+            </div>
+            <div class="panel-body">
+              <p><strong>Nombre:</strong> Narciso Cerpa</p>
+              <p><strong>Nacionalidad:</strong> Chile</p>
+              <p><strong>Valoración:</strong> 
+                2 ★★★</span>
+              </p>
+            </div>
+            <div class="panel-footer">
+              <p>
+                <strong>Valorar:</strong> 
+                <input type="number" id="valoracion" min="1" step="1" max="5" data-bind="value:valoracion" />
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
+              <div class="panel panel-white post panel-shadow">
+                  <div class="post-heading">
+                      <div class="pull-left image">
+                          <img src="../Images/eortiz.jpg" class="img-circle avatar" alt="user profile image">
+                      </div>
+                      <div class="pull-left meta">
+                          <div class="title h5">
+                              <a href="#"><b>Edgardo Ortiz</b></a>
+                              Hizo un Comentario.
+                          </div>
+                          <h6 class="text-muted time">1 minute ago</h6>
+                      </div>
+                      <i class="fa fa-times pull-right" aria-hidden="true" href="#"></i>
+                  </div> 
+                  <div class="post-description"> 
+                      <p>Estimado, Narciso. Por este canal quiero solicitar el "Peipa" sobre Interfaz Humano Computador. 
+                      Estaré atento a sus comentarios.
+                      </p>
+                  </div>
+                  <div class="post-footer">
+                      <div class="input-group"> 
+                          <input class="form-control" placeholder="Agregar comentario" type="text">
+                          <span class="input-group-addon">
+                              <a href="#"><i class="fa fa-edit"></i></a>  
+                          </span>
+                      </div>
+                      <ul class="comments-list">
+                          <li class="comment">
+                              <a class="pull-left" href="#">
+                                  <img class="avatar" src="../Images/ncerpa.jpg" alt="avatar">
+                              </a>
+                              <div class="comment-body">
+                                  <div class="comment-heading">
+                                      <h4 class="user">Narciso Cerpa</h4>
+                                      <h5 class="time">Hace 5 minutos</h5>
+                                  </div>
+                                  <!--<p>Creo que deberías buscarlo en mi revista.</p>-->
+                                  <p>Ok, lo enviaré.</p>
+                              </div>
+                              <!--<ul class="comments-list">
+                                  <li class="comment">
+                                      <a class="pull-left" href="#">
+                                          <img class="avatar" src="../Images/eortiz.jpg" alt="avatar">
+                                      </a>
+                                      <div class="comment-body">
+                                          <div class="comment-heading">
+                                              <h4 class="user">Edgardo Ortiz</h4>
+                                              <h5 class="time">Hace 3 minutos</h5>
+                                              <i class="fa fa-times pull-right" aria-hidden="true" href="#"></i>
+                                          </div>
+                                          <p>Cerpa qlo. Pasa la w*a c**********e</p>
+                                      </div>
+                                  </li>
+                                  <li class="comment">
+                                      <a class="pull-left" href="#">
+                                          <img class="avatar" src="../Images/ncerpa.jpg" alt="avatar">
+                                      </a>
+                                      <div class="comment-body">
+                                          <div class="comment-heading">
+                                              <h4 class="user">Narciso Cerpa</h4>
+                                              <h5 class="time">Hace 2 minutos</h5>
+                                          </div>
+                                          <p>Ok, lo enviaré.</p>
+                                      </div>
+                                  </li> 
+                              </ul>-->
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+          
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery.min.js"></script>
+    
+    <!-- JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/propiedades.js"></script>
+  </body>
+</html>

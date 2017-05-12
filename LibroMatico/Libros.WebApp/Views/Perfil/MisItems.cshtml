@@ -1,0 +1,193 @@
+﻿@model PagedList.IPagedList<KeyValuePair<Libros.Models.Item , bool>>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "MisItems";
+    Layout = "~/Views/_Layout.cshtml";
+
+    var Perfil_Activo = Libros.WebApp.Utils.SessionManager.PerfilActivo( );
+    var Cuenta_Activa = Libros.WebApp.Utils.SessionManager.CuentaActiva( );
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/Contents/css/perfil.css">
+    <link rel="stylesheet" href="~/Contents/css/dotText.css">
+}
+
+@section Scripts{
+    <script src="~/Contents/js/imagen.js"></script>
+    <script type="text/javascript">
+        function activadoDisp(Perfil_Id, Item_Id, checkbox) {
+            var estado = checkbox.checked;
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Disponibilidad", "Perfil")",
+                dataType: 'json',
+                quietMillis: 250,
+                data: { "Perfil_Id": Perfil_Id, "Item_Id": Item_Id, "estado": estado },
+                success: function (data) {
+                    var verde = "<label id='estado_id_" + Item_Id + "'><span class='label label-success' style='margin-bottom:20px;'>Disponible</span></label>";
+                    var rojo = "<label id='estado_id_" + Item_Id + "'><span class='label label-danger' style='margin-bottom:20px;'>No disponible</span></label>";
+                    if (estado) {
+                        $("#estado_id_" + Item_Id).replaceWith(verde);
+                    }
+                    else {
+                        $("#estado_id_" + Item_Id).replaceWith(rojo);
+                    }
+                },
+                cache: true
+            });
+        };
+    </script>
+}
+
+<div class="container">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink( "Inicio" , "Index" , "Home" )</li>
+        <li class="active">Mis Items</li>
+    </ol>
+
+    <div class="container">
+        <div class="row">
+            <label>Pagina @( Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) de @Model.PageCount</label>
+            @Html.PagedListPager( Model , page => Url.Action( "MisItems" , new { page , sortOrder = ViewBag.CurrentSort , currentFilter = ViewBag.CurrentFilter } ) )
+            <div class="row" style="display: flex; flex-wrap: wrap;" id="MisItems">
+                @{
+                    foreach ( var item in Model )
+                    {
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    @{
+                                        <div class="media" style="margin-bottom:10px;">
+                                            @{
+                                                var prestado = item.Key.Propietario.HistorialPrestamista( ).Any( p => p.Item.Id == item.Key.Id );
+                                                if ( Cuenta_Activa != null && Perfil_Activo != null && Perfil_Activo.Id == item.Key.Propietario.Id && !prestado )
+                                                {
+                                                    <a class="close pull-right" role="button" data-toggle="modal" data-target="#Eliminar">&times;</a>
+                                                }
+
+                                            }
+                                            <div class="media-left media-middle">
+                                                <a href="@Url.Action( "Detalles" , "Item" , new { id = item.Key.Id } )">
+                                                    <img class="media-object" src="/Contents/img/@item.Key.UrlImagen" alt=".." style="width:100px; height:150px;">
+                                                </a>
+                                            </div>
+                                            <div class="media-body">
+                                                <div class="row">
+                                                    <div class="col-md-10">
+                                                        <h4>
+                                                            <p class="text-primary dot-text"> @Html.ActionLink( item.Key.Titulo , "Detalles" , "Item" , new { id = item.Key.Id } , null ) </p>
+                                                        </h4>
+                                                        @{
+                                                            var autores = item.Key.Autores( );
+
+                                                            if ( autores.Count > 0 )
+                                                            {
+                                                                <medium>por</medium>
+                                                                var ultimo = autores.Last( );
+
+                                                                foreach ( var autor in autores )
+                                                                {
+                                                                    if ( autor.Equals( ultimo ) ) //Si es el último autor
+                                                                    {
+                                                                        <medium>
+                                                                            y
+                                                                        </medium>
+                                                                    }
+                                                                    <medium>
+                                                                        @Html.ActionLink( autor.Nombre , "Busqueda" , "Home" , new { buscar = autor.Nombre , filtro = 2 } , null ),
+                                                                    </medium>
+                                                                }
+                                                            }
+                                                            else
+                                                            {
+                                                                <medium>No se ha definido autor</medium>
+                                                            }
+
+                                                        }
+                                                    </div>
+
+                                                    @{
+                                                        if ( Perfil_Activo != null && item.Key.Propietario.Id == Perfil_Activo.Id )
+                                                        {
+                                                            <div class="col-md-10" style="margin-top:5px;">
+
+                                                                @{
+                                                                    long Prestamo_Id = item.Key.Prestamo_Aceptado_Id_Item();
+                                                                    Libros.Models.Prestamo prestamo = new Libros.Models.Prestamo();
+                                                                    prestamo.Seleccionar(Prestamo_Id);
+
+                                                                    if ((Convert.ToInt32(prestamo.Estado) == 0 || Convert.ToInt32(prestamo.Estado) == 1)
+                                                                        && prestamo.Id != 0)
+                                                                    {
+                                                                        <label>
+                                                                            <span class="label label-primary" style="margin-bottom:20px;">En préstamo</span>
+                                                                        </label>
+                                                                    }
+                                                                    else if (prestamo.Id == 0)
+                                                                    {
+                                                                        if (!item.Value)
+                                                                        {
+                                                                            <label class="switch">
+                                                                                <input type="checkbox" class="bordeado" onchange="" id="checkbox @item.Key.Id"
+                                                                                       onclick="activadoDisp(@item.Key.Propietario.Id, @item.Key.Id, this)">
+                                                                                <div class="slider round"></div>
+                                                                            </label>
+                                                                            <br />
+                                                                            <label id="estado_id_@item.Key.Id">
+                                                                                <span class="label label-danger" style="margin-bottom:20px;">No disponible</span>
+                                                                            </label>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <label class="switch">
+                                                                                <input type="checkbox" class="bordeado" checked="checked" id="@item.Key.Id"
+                                                                                       onclick="activadoDisp(@item.Key.Propietario.Id, @item.Key.Id, this)">
+                                                                                <div class="slider round"></div>
+                                                                            </label>
+                                                                            <br />
+                                                                            <label id="estado_id_@item.Key.Id">
+                                                                                <span class="label label-success" style="margin-bottom:20px;">Disponible</span>
+                                                                            </label>
+                                                                        }
+                                                                    }
+                                                                }
+                                                            </div>
+                                                        }
+                                                    }
+                                                </div>
+                                                <h5 class="dot-text" title="@item.Key.Resumen">@item.Key.Resumen</h5>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Eliminar" class="modal" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">¿Está seguro que desea eliminar este item?</h4>
+                                    </div>
+                                    @using ( Html.BeginForm( "Eliminar" , "Item" , FormMethod.Post ) )
+                                    {
+                                        <fieldset>
+                                            @Html.Hidden( "Perfil_Id" , item.Key.Propietario.Id )
+                                            @Html.Hidden( "Item_Id" , item.Key.Id )
+                                            <div class="modal-footer">
+                                                <input class="btn btn-danger" value="Eliminar" type="submit" />
+                                                <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                            </div>
+                                        </fieldset>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                                                        }
+                }
+            </div>
+        </div>
+    </div>
+</div>

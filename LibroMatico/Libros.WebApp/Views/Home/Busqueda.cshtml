@@ -1,0 +1,94 @@
+﻿@model IEnumerable<Libros.Models.Item>
+@{
+    ViewBag.Title = "Busqueda";
+    Layout = "~/Views/_Layout.cshtml";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/Contents/css/dotText.css">
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-lg-10 col-md-9">
+                            <h2 class="panel-title">Resultados de busqueda</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        @if (Model.Count() == 0)
+                        {
+                            <br></br>
+                            <div class="col-xs-12 col-md-6">
+                                <div class="container">
+                                    <p class="text-center" id="no-resultados">No se han encontrado resultados para "<strong>@ViewBag.Termino</strong>"</p>
+                                </div>
+                            </div>
+                        }
+                        @try
+                        {
+                            foreach ( var item in Model )
+                            {
+                                <div class="col-xs-6 col-md-3">
+                                    <a href="@Url.Action("Detalles", "Item", new { id = item.Id })" class="thumbnail" style="border:none">
+                                        @if ( !String.IsNullOrEmpty( item.UrlImagen ) )
+                                        {
+                                            <img src="@Url.Content( "~/Contents/img/" + item.UrlImagen )" alt="imagen @item.Titulo" style="width:100px; height:150px">
+                                        }
+                                        else
+                                        {
+                                            <img src="@Url.Content( "~/Contents/img/notPicture.jpg" )" alt="imagen @item.Titulo" style="width:100px; height:150px">
+                                        }
+                                    </a>
+                                    <div class="caption text-center dot-text">
+                                        <a href="@Url.Action("Detalles", "Item", new { id = item.Id })"><strong class="dot-text">@item.Titulo</strong></a>
+                                    </div>
+                                </div>
+                            }
+
+                        }
+                        catch ( Exception ex )
+                        {
+                            <p class="text-center">... No hay resultados de busqueda ...</p>
+                        }
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    @if ( ViewBag.Page > 1 )
+                    {
+                        <a href="@Url.Action("Busqueda", new { page = ViewBag.Page - 1 , buscar= ViewBag.Termino, cantResult = ViewBag.Results })"
+                           class="btn btn-default">
+                            &laquo; Prev
+                        </a>
+                    }
+                    else
+                    {
+                        <a href=""
+                           class="btn btn-default" style="opacity: 0.65; cursor: not-allowed;" disabled>
+                            &laquo; Prev
+                        </a>
+                    }
+                    @if ( ViewBag.More > 0 )
+                    {
+                        <a href="@Url.Action("Busqueda", new { page = ViewBag.Page + 1 , buscar= ViewBag.Termino , cantResult = ViewBag.Results } )"
+                           class="btn btn-default">
+                            Next &raquo;
+                        </a>
+                    }
+                    else
+                    {
+                        <a href="" class="btn btn-default" style="opacity: 0.65; cursor: not-allowed;" disabled>
+                            Next &raquo;
+                        </a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+</div>

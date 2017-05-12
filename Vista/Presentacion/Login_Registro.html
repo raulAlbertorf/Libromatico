@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Iniciar sesión</title>
+
+    <!-- CSS -->
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/login_registro.css" rel="stylesheet">
+
+    <style>
+      
+
+
+    </style>
+
+    <script type="text/JavaScript">
+
+
+    function validar_email_ingreso()
+    {
+
+    }
+
+    function validar_contrasenas_ingreso()
+    {
+
+    }
+
+    function validar_email_registro()
+    {
+      var email = document.getElementById("Email_Registro").value;
+      var regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+      if (regex.test(email))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+
+    function validar_contrasenas_registro()
+    {
+      var cn = document.getElementById("Contrasena_Nuevo").value;
+      var crn = document.getElementById("Contrasena_Repetir").value;
+
+      var espaciosBlancos = false;
+      var cont = 0;
+
+      while (!espaciosBlancos && (cont < cn.length))
+      {
+        if (cn.charAt(cont) == " ")
+        {
+          alert("No pueden quedar campos en blanco!");
+          return false;
+        }
+        cont++;
+      }
+
+      if (cn.length == 0 || crn.length == 0)
+      {
+        alert("Las contraseñas no pueden quedar en blanco!");
+        return false;
+      }
+
+      if (cn != crn)
+      {
+        alert("Las contraseñas no coinciden!");
+        return false;
+      }
+    }
+
+    function validar_campos_registro()
+    {
+      var val_email = validar_email_registro();
+      var val_contrasenas = validar_contrasenas_registro();
+
+      if (val_email == true)
+      {
+        if (val_contrasenas == true)
+        {
+          return true;
+        }
+        else
+        {
+          alert("La contraseña no permite espacios en blanco o éstas no coinciden!");
+          return false;
+        }
+      }
+      else
+      {
+        alert("El email ingresado es incorrecto!");
+        return false;
+      }
+    }
+
+    function validar()
+    {
+      var email = document.getElementById("Email_Registro").value;
+      var cn = document.getElementById("Contrasena_Nuevo").value;
+      var crn = document.getElementById("Contrasena_Repetir").value;
+
+      if (email.length > 0 &&  cn.length > 0 && crn.length > 0 && cn == crn)
+      {
+        window.location.href = "Cuenta_ver.html";
+      }
+      else
+      {
+        alert("No has podido registrarte. Los campos pedidos están vacíos o las contraseñas no coinciden");
+      }
+    }
+
+
+
+  </script>
+
+  </head>
+
+  <body>
+    <div class="background-image"></div>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">LibroMatico</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"> <span class="glyphicon glyphicon-search"></span> Buscar</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="glyphicon glyphicon-equalizer"></span> Top
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Más vistos</a></li>
+                <li><a href="#">últimos agregados</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <span class="glyphicon glyphicon-user"></span> Cuenta
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Registrar</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-6 col-sm-8 col-xs-12 col-md-offset-3 col-sm-offset-2">
+              <div class="panel panel-default">
+                <div class="panel-body">
+                    <ul class="nav nav-pills nav-justified">
+                      <li class="active"><a data-toggle="pill" href="#Ingreso"> <font size="3">Ingreso</font> </a></li>
+                      <li ><a data-toggle="pill" href="#Registro"> <font size="3"> Registro </font> </a></li>
+                    </ul>
+                  <div class="tab-content">
+                    <div id="Ingreso" class="tab-pane fade in active">
+                      <div class="form-group">
+                        <p></p>
+                        <label for="Email"> Email </label>
+                        <input type="text" class="form-control" id="Email_Ingreso" placeholder="Ingresa tu email"></input>
+                        <p></p>
+                        <label for="Contraseña"> Contraseña </label>
+                        <input type="password" class="form-control" id="Contrasena" placeholder="Ingresa tu contraseña">
+                      </div>
+                      <div>
+                        <a role="button" id="Boton_Ingresar" href="Perfiles.html" class="btn btn-success btn-lg pull-right">Ingresar</a>
+                      </div>
+                      <p></p>
+                      <div>
+                        <button type="button" class="btn btn-link">¿Olvidaste tu contraseña?</button>
+                      </div>
+                    </div>
+                  <div id="Registro" class="tab-pane fade">
+                    <div class="form-group">
+                      <p></p>
+                      <label for="Email"> Email </label>
+                      <input type="text" class="form-control" id="Email_Registro" placeholder="Ingresa tu email"></input>
+                      <p></p>
+                      <label for="Contraseña"> Contraseña </label>
+                      <input type="password" class="form-control" id="Contrasena_Nuevo" placeholder="Escribe tu contraseña">
+                      <p></p>
+                      <label for="Contraseña">Repetir Contraseña </label>
+                      <input type="password" class="form-control" id="Contrasena_Repetir" placeholder="Repite tu contraseña">
+                      <p></p>
+                      <a role="button" id="Boton_Registrar" href="Perfiles.html" class="btn btn-success btn-lg pull-right">Registrar</a>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal de creación exitosa de cuenta -->
+
+  <div id="Modal_Creacion" class="modal">
+    <div class="modal-content">
+      <span class="close">x</span>
+      <p>Tu cuenta ha sido creada con éxto</p>
+    </div>
+  </div>
+
+  </body>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.min.js"></script>
+
+  <!-- JS -->
+  <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+</html>

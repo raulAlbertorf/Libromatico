@@ -1,0 +1,23 @@
+2016-12-06 23:23:38,068 [1] INFO Libromatico - Aplicación Iniciada
+2016-12-06 23:24:18,132 [6] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2016-12-06 23:24:20,394 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2016-12-06 23:24:20,403 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2016-12-06 23:24:20,413 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2016-12-06 23:24:20,421 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2016-12-06 23:24:20,430 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2016-12-06 23:24:20,437 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2016-12-06 23:24:20,446 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2016-12-06 23:24:20,454 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2016-12-06 23:24:20,461 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 1 - Titulo: Harry Potter y la Piedra Filosofal
+2016-12-06 23:24:20,470 [6] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados
+2016-12-06 23:26:53,585 [7] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2016-12-06 23:26:53,604 [7] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2016-12-06 23:26:53,621 [7] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2016-12-06 23:26:53,628 [7] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2016-12-06 23:26:53,634 [7] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2016-12-06 23:26:53,654 [7] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2016-12-06 23:26:53,665 [7] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2016-12-06 23:26:53,673 [7] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2016-12-06 23:26:53,679 [7] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2016-12-06 23:26:53,684 [7] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 1 - Titulo: Harry Potter y la Piedra Filosofal
+2016-12-06 23:26:53,691 [7] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados

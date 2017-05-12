@@ -1,0 +1,41 @@
+﻿@model Libros.Models.Perfil
+<div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content" id="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" onclick="closeModal()">&times;</button>
+            <h4 class="modal-title">Modificar Perfil</h4>
+        </div>
+        @using ( Html.BeginForm( "Modificar" , "Perfil" , FormMethod.Post ) )
+        {
+            <div class="modal-body">
+
+                <div class="form-group">
+                    @Html.Hidden( "id" , Model.Id , new { @class = "hiddenid" } )
+                    @Html.Hidden( "Email" , Model.Cuenta.Email , new { @class = "hidden" } )
+                    <label for="Nombre">Nombre:</label>
+                    <input class="form-control" name="Nombre" type="text" maxlength="50" value="@Model.Nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="Nacionalidad">Nacionalidad:</label>
+                    <input class="form-control" id="country_selector2" maxlength="50" name="Nacionalidad" type="text" required>
+                    @Html.Hidden( "nac" , Model.Nacionalidad , new { @class = "hidden" } )
+                </div>
+                <div>
+                    <label for="ciudad">Ubicación:</label>
+                    <input class="form-control" name="ciudad" maxlength="50" placeholder="Ingrese ciudad" type="text" value="@Libros.WebApp.Utils.GeoLocation.ciudad(Model.Ubicacion)">
+                </div>
+                <input class="form-control" name="UrlImagen" type="hidden" value="@Model.UrlImagen">
+                <input class="form-control" name="Ubicacion" type="hidden" value="@Model.Ubicacion">
+
+            </div>
+            <div class="modal-footer">
+                <input class="btn btn-primary" value="Modificar" type="submit" />
+                <button type="button" class="btn btn-default" onclick="closeModal()">Cerrar</button>
+            </div>
+        }
+    </div>
+
+</div>
+

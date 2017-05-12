@@ -1,0 +1,107 @@
+﻿@model Libros.Models.Prestamo
+
+<ul class="nav nav-tabs">
+    <div class="liner"></div>
+    @if ( Model.Estado == Libros.Models.EstadoPrestamo.Cancelado )
+    {
+        <li class="active">
+            <a href="#" data-toggle="tab" title="Cancelado">
+                <span class="round-tabs red">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </span>
+            </a>
+        </li>
+    }
+    else
+    {
+        <li class="is-disabled">
+            <a href="#" data-toggle="tab" title="Cancelado">
+                <span class="round-tabs red">
+                    <i class="glyphicon glyphicon-remove"></i>
+                </span>
+            </a>
+        </li>
+    }
+    @if ( Model.Estado == Libros.Models.EstadoPrestamo.Solicitado )
+    {
+        <li class="active">
+            <a href="#" data-toggle="tab" title="Solicitado">
+                <span class="round-tabs yellow">
+                    <i class="glyphicon glyphicon-plus-sign"></i>
+                </span>
+            </a>
+        </li>
+    }
+    else
+    {
+        <li class="is-disabled">
+            <a href="#" data-toggle="tab" title="Solicitado">
+                <span class="round-tabs yellow">
+                    <i class="glyphicon glyphicon-plus-sign"></i>
+                </span>
+            </a>
+        </li>
+    }
+    @if ( Model.Estado == Libros.Models.EstadoPrestamo.Aceptado )
+    {
+        <li class="active">
+            <a href="#" data-toggle="tab" title="Aceptado">
+                <span class="round-tabs blue">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                </span>
+            </a>
+        </li>
+    }
+    else
+    {
+        <li class="is-disabled">
+            <a href="#" data-toggle="tab" title="Aceptado">
+                <span class="round-tabs blue">
+                    <i class="glyphicon glyphicon-envelope"></i>
+                </span>
+            </a>
+        </li>
+    }
+    @if ( Model.Estado == Libros.Models.EstadoPrestamo.EnTransito )
+    {
+        <li class="active">
+            <a href="#" data-toggle="tab" title="En Transito">
+                <span class="round-tabs cyan">
+                    <i class="glyphicon glyphicon-send"></i>
+                </span>
+            </a>
+        </li>
+    }
+    else
+    {
+        <li class="is-disabled">
+            <a href="#" data-toggle="tab" title="En Transito">
+                <span class="round-tabs cyan">
+                    <i class="glyphicon glyphicon-send"></i>
+                </span>
+            </a>
+        </li>
+    }
+    @if ( Model.Estado == Libros.Models.EstadoPrestamo.Entregado )
+    {
+        <li class="active">
+            <a href="#" data-toggle="tab" title="Entregado">
+                <span class="round-tabs green">
+                    <i class="glyphicon glyphicon-ok"></i>
+                </span>
+            </a>
+        </li>
+    }
+    else
+    {
+        <li class="is-disabled">
+            <a href="#" data-toggle="tab" title="Entregado">
+                <span class="round-tabs green">
+                    <i class="glyphicon glyphicon-ok"></i>
+                </span>
+            </a>
+        </li>
+    }
+    
+</ul>
+

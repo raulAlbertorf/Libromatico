@@ -1,0 +1,48 @@
+﻿@model Libros.Models.Cuenta
+@{
+    ViewBag.Title = "Perfiles";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@section Styles{
+    <link rel="stylesheet" href="~/Contents/css/cuenta.css" />
+    <link rel="stylesheet" href="~/Contents/css/circleButton.css" />
+}
+@section Scripts {
+    <script type="text/javascript" src="~/Contents/js/sinBuscar.js"></script>
+}
+
+<div class="container">
+
+    <div id="list-perfil">
+        <br>
+        <div class="text-center titulo">
+            <h2>Elige tu perfil</h2>
+            <br></br>
+        </div>
+        <div class="container">
+            <div class="row row-centered">
+                @{
+                    var perfiles = Model.Perfiles( );
+                    foreach ( var p in perfiles )
+                    {
+                        <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2 col-centered">
+                            <div class="box fade">
+                                <a href="@Url.Action("Seleccionar", "Cuenta", new { id= p.Id } )">
+                                    <img class="img-responsive img-perfil" src="@Url.Content( "~/Contents/img/" + p.UrlImagen )">
+                                </a>
+                            </div>
+
+                            <div class="caption">
+                                <p class="text-center titulo-perfiles">@p.Nombre</p>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="row row-centered" style="margin-top:20px;">
+                <a class="btn btn-default" href="@Url.Action("ManipularPerfiles","Cuenta")">Gestionar Perfiles</a>
+            </div>
+        </div>
+    </div>
+    </div>

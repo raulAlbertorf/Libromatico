@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LibroMatico</title>
+
+    <!-- CSS -->
+    <link href="plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/post.css" rel="stylesheet">
+    <link href="css/timeline.css" rel="stylesheet">
+    <link href="plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+      .navbar, .breadcrumb {
+        border-radius: 0 !important;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">LibroMatico</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="buscar.html"> <span class="glyphicon glyphicon-search"></span> Buscar</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <span class="glyphicon glyphicon-equalizer"></span> Top
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Más vistos</a></li>
+                  <li><a href="#">últimos agregados</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <span class="glyphicon glyphicon-user"></span> Cuenta
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Registrar</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <ol class="breadcrumb" style="margin-top:50px;">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="active">Prestamo</li>
+      </ol>
+      <div class="container">
+        <!-- Estado de prestamo -->
+        <div class="col-md-6 col-sm-12 col-xs-12"> 
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2 class="panel-title">Estado Prestamo</h2>
+            </div>
+            <!--<div class="panel-body">
+              <div class="panel panel-default">-->
+            <div class="board">
+              <div class="board-inner">
+                <ul class="nav nav-tabs">
+                  <div class="liner"></div>
+                  <li class="is-disabled">
+                    <a href="#Estado" data-toggle="tab" title="Solicitado">
+                      <span class="round-tabs yellow">
+                        <i class="glyphicon glyphicon-plus-sign"></i>
+                      </span> 
+                    </a>
+                  </li>
+
+                  <li class="is-disabled">
+                    <a href="#Estado" data-toggle="tab" title="Enviado">
+                     <span class="round-tabs green">
+                         <i class="glyphicon glyphicon-envelope"></i>
+                     </span> 
+                    </a>
+                  </li>
+                 <li class="active">
+                  <a href="#Estado" data-toggle="tab" title="EnTransito">
+                   <span class="round-tabs blue">
+                        <i class="glyphicon glyphicon-send"></i>
+                   </span> 
+                  </a>
+                 </li>
+
+                 <li class="is-disabled">
+                   <a href="#Estado" data-toggle="tab" title="Entregado">
+                       <span class="round-tabs grey">
+                            <i class="glyphicon glyphicon-ok"></i>
+                       </span> 
+                   </a>
+                 </li>
+
+                 <li class="is-disabled">
+                    <a href="#Estado" data-toggle="tab" title="Cancelado">
+                       <span class="round-tabs red">
+                            <i class="glyphicon glyphicon-remove"></i>
+                       </span>
+                    </a>
+                 </li>               
+                </ul>
+              </div>
+              <div class="tab-content">
+                <div class="tab-pane fade in active" id="Estado">
+                  <p><strong>Estado de Prestamo </strong> <span class="label label-info">En Transito</span></p>
+                  <p><strong>Fecha de Envío </strong> 09/10/2016</p>
+                  <p><strong>Fecha de Recepción </strong> 10/10/2016</p>
+                  <p><strong>Fecha de Expiración </strong> 10/11/2016</p>
+                  <p><strong>Fecha Última Modificación </strong> 19/10/2016</p>
+                </div>
+              </div>
+            </div>
+              <!--</div>
+            </div>-->
+          </div>
+        </div>
+        <!--Detalle Prestamo -->
+        <div class="col-md-6 col-sm-12 col-xs-12"> 
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2 class="panel-title">Detalle Prestamo</h2>
+            </div>
+            <div class="panel-body">
+              <div class="col-xs-7 col-sm-4 col-md-5">
+                <div class="thumbnail">
+                  <figure>
+                      <div style="display: inline-block; width: 100%; height: 200px; background-position: center center; background-size: cover; background-image: url('../Images/img2.jpg')">
+                      </div>
+                  </figure>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-6">
+                <p><strong>Titulo:</strong> Interfaz Humano Computador</p>
+                <p><strong>Autor:</strong> Narciso Cerpa</p>
+                <p><strong>Categoría:</strong> Paper de Investigación</p>
+                <p><strong>ISBN-10:</strong> 9562621898</p>
+                <p><strong>Lenguaje:</strong> Español</p>
+                <h3 class="panel-title" style="margin-top:30px;">Propietario</h3>
+                <p><strong>Nombre:</strong> Narciso Cerpa</p>
+                <p><strong>Nacionalidad:</strong> Chile</p>
+                <p><strong>Valoración:</strong>
+                  2 ★★★</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Comentarios-->
+        <div class="col-md-6 col-sm-12 col-xs-12">
+          <div class="panel panel-white post">
+            <div class="post-heading">
+                <div class="pull-left image">
+                    <img src="../Images/eortiz.jpg" class="img-circle avatar" alt="user profile image">
+                </div>
+                <div class="pull-left meta">
+                    <div class="title h5">
+                        <a href="#"><b>Edgardo Ortiz</b></a>
+                        Hizo un Comentario.
+                    </div>
+                    <h6 class="text-muted time">1 minute ago</h6>
+                </div>
+                <i class="fa fa-times pull-right" aria-hidden="true" href="#"></i>
+            </div>
+            <div class="post-description">
+                <p>Estimado, Narciso. Por este canal quiero solicitar el "Peipa" sobre Interfaz Humano Computador.
+                Estaré atento a sus comentarios.
+                </p>
+            </div>
+            <div class="post-footer">
+                <div class="input-group">
+                    <input class="form-control" placeholder="Agregar comentario" type="text">
+                    <span class="input-group-addon">
+                        <a href="#"><i class="fa fa-edit"></i></a>
+                    </span>
+                </div>
+                <ul class="comments-list">
+                    <li class="comment">
+                        <a class="pull-left" href="#">
+                            <img class="avatar" src="../Images/ncerpa.jpg" alt="avatar">
+                        </a>
+                        <div class="comment-body">
+                            <div class="comment-heading">
+                                <h4 class="user">Narciso Cerpa</h4>
+                                <h5 class="time">Hace 5 minutos</h5>
+                            </div>
+                            <p>Creo que deberías buscarlo en mi revista.</p>
+                            <!--<p>Ok, lo enviaré.</p>-->
+                        </div>
+                        <ul class="comments-list">
+                            <li class="comment">
+                                <a class="pull-left" href="#">
+                                    <img class="avatar" src="../Images/eortiz.jpg" alt="avatar">
+                                </a>
+                                <div class="comment-body">
+                                    <div class="comment-heading">
+                                        <h4 class="user">Edgardo Ortiz</h4>
+                                        <h5 class="time">Hace 3 minutos</h5>
+                                        <i class="fa fa-times pull-right" aria-hidden="true" href="#"></i>
+                                    </div>
+                                    <p>Cerpa qlo. Pasa la w*a c**********e</p>
+                                </div>
+                            </li>
+                            <li class="comment">
+                                <a class="pull-left" href="#">
+                                    <img class="avatar" src="../Images/ncerpa.jpg" alt="avatar">
+                                </a>
+                                <div class="comment-body">
+                                    <div class="comment-heading">
+                                        <h4 class="user">Narciso Cerpa</h4>
+                                        <h5 class="time">Hace 2 minutos</h5>
+                                    </div>
+                                    <p>Ok, lo enviaré.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+              <p>
+                © 2016 LibroMatico
+              </p>
+              <p>
+                Número de usuarios: 234343
+              </p>
+              <p>
+                Número de prestados realizados: 1345333
+              </p>
+              <p>
+
+              </p>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+               <blockquote>
+                 <p>"El que lee mucho y anda mucho, ve mucho y sabe mucho."</p>
+                 <footer> Miguel de Cervantes (1547-1616) Escritor español.</footer>
+               </blockquote>
+            </div>
+            <div class="copyright col-xs-12">
+              <div class="text-center">
+                <p>
+                  Made in Chile <span>CL</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- JS -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/propiedades.js"></script>
+  </body>
+</html>

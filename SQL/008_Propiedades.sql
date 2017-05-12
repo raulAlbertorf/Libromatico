@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS Propiedad (
+	NombrePropiedad VARCHAR(255),
+	ValorPropiedad VARCHAR(255),
+	Item_Id BIGINT UNSIGNED NOT NULL,
+	FOREIGN KEY(Item_Id) REFERENCES Item(Id) ON DELETE CASCADE,
+	PRIMARY KEY (NombrePropiedad, Item_Id)
+);

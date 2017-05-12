@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>LibroMatico</title>
+
+    <!-- CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/post.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">LibroMatico</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Inicio</a></li>
+              <li><a href="#">Buscar</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <span class="glyphicon glyphicon-user"></span> Cuenta
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Login</a></li>
+                  <li><a href="#">Registrar</a></li>
+                  <li><a href="#">Recuperar Contraseña</a></li> 
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <ol class="breadcrumb" style="margin-top:50px;">
+        <li><a href="#">Inicio</a></li>
+        <li class="active">Prestamo</li>
+      </ol>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
+            <div class="panel panel-default panel-shadow">
+              <div class="panel-heading">
+                <h2 class="panel-title text-center">Solicitud de Prestamo</h2>
+              </div>
+
+              <div class="panel-body">
+                
+                <h3>Edgardo Ortíz</h3> 
+                <p>Te ha enviado una solicitud de prestamo, por el siguiente Item:</p>
+                <div class="container">
+                  <div class="col-sm-2 col-md-2"> 
+                    <div class="thumbnail panel-shadow"> 
+                      <img alt="item_image" src="../Images/Papelucho.jpg">
+                    </div>
+                  </div>
+                  <div class="col-sm-3 col-md-3">
+                    <div class="panel panel-default ">
+                      <div class="panel-heading">
+                        <h2 class="panel-title">Papelucho</h2>
+                      </div>
+                      <div class="panel-body">
+                        <p class="text-justify">
+                          Esta es la historia de Papelucho, un niño como tú que un día decidió escribir un diario de vida donde anotaba todas las cosas que le pasaban. Su ingenio e imaginación para interpretar las cosas cotidianas de la vida lo han transformado en el personaje infantil más querido y leído de la narrativa chilena.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal-footer">
+                <div class="form-group">
+                  <button type="button" class="btn btn-success" id="submit" data-dismiss="modal">Aceptar</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Rechazar</button>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+          
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="../js/jquery.min.js"></script>
+    
+    <!-- JS -->
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/propiedades.js"></script>
+  </body>
+
+</html>

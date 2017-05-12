@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>LibroMatico</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/post.css" rel="stylesheet">
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="css/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="css/perfil.css">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">LibroMatico</a>
+          </div>
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Inicio</a></li>
+              <li><a href="Buscar/buscar.html">Buscar</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                  <span class="glyphicon glyphicon-user"></span> Cuenta
+                  <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="Login_Registro.html">Login</a></li>
+                  <li><a href="#">Registrar</a></li>
+                  <li><a href="#">Recuperar Contraseña</a></li> 
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <ol class="breadcrumb" style="margin-top:50px;">
+        <li><a href="index.html">Inicio</a></li>
+        <li class="active">Perfil</li>
+      </ol>
+      
+      <div class="container">
+        <div class="col-sm-3 col-md-3"> 
+          <div class="thumbnail"> 
+            <img alt="perfil_image" src="Images/perfil_image.jpg" style="width:170px; height:170px"> 
+            <div class="caption"> 
+              <p class="text-center">
+                <p><strong>Prestamista:</strong>
+                  4 ★★★★</span></p>
+                <p><strong>Receptor:</strong>
+                  2 ★★</span></p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-6">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h2 class="panel-title">Información</h2>
+            </div>
+
+            <div class="panel-body">
+              <p class="text-justify">
+                <p><strong>Nombre:</strong> Sergio Flores</p>
+                <p><strong>Nacionalidad:</strong> Chile</p>  
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-3 col-md-3"> 
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Ubicación</h3>
+
+            </div>
+            <div class="panel-body">
+              <!--<img alt="ubicacion_image" src="Images/ubicacion_image.jpg" width="200" height="200"> -->
+              <div id="map" style="width:auto; height:200px; background:white"></div>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="container">
+          <div class="col-sm-12 col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Mis Prestamos</h2>
+              </div>
+
+              <div class="panel-body well">
+                <div id="owl-prestamos" class="owl-carousel owl-theme">
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img7.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img8.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img9.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="Item/Item.html">
+                      <img src="Images/Papelucho.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img10.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img11.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img12.jpg">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="container">
+          <div class="col-sm-12 col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Recibidos</h2>
+              </div>
+              <div class="panel-body well">
+                <div id="owl-recibidos" class="owl-carousel owl-theme">
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img14.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img15.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img16.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="item.html">
+                      <img src="Images/img13.jpg">
+                    </a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!-- Include Owl js plugin -->
+    <script src="js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="js/perfil.js"></script>
+
+    <!-- JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Include functionality of a map -->
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+
+  </body>
+</html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LibroMatico</title>
+
+    <!-- CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!--CSS Buscar-->
+    <link href="/css/buscar.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Barra superior-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">LibroMatico</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="buscar.html"> <span class="glyphicon glyphicon-search"></span> Buscar</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-equalizer"></span> Top
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Más vistos</a></li>
+                            <li><a href="#">últimos agregados</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-user"></span> Cuenta
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Login_Registro.html">Login</a></li>
+                            <li><a href="#">Registrar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="margin-top:50px;">
+        <!--Ligas-->
+        <ol class="breadcrumb">
+            <li><a href="#">LibroMatico</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li class="active">Buscar</li>
+        </ol>
+
+        <!--Barra de busqueda-->
+        <div class="row panel">
+            <div class="col-md-offset-0 col-md-12">
+                <span class="glyphicon glyphicon-home glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-film glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-road glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-camera glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-book glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-picture glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-map-market glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-globe glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-wrench glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-thumbs-up glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-heart-empty glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-phone glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-usd glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-cd glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-tree-deciduous glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-lamp glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-scale glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-grain glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-sunglasses glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-text-background glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-modal-window glyphicon-grande"></span>
+                <span class="glyphicon glyphicon-education glyphicon-grande"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-1 col-xs-4 col-md-offset-2 col-md-2 Sin_Padding_derecho">
+                <select class="form-control">
+                    <option selected> Selecciona un filtro... </option>
+                    <option> Titulo </option>
+                    <option> Autor </option>
+                    <option> Propiedad </option>
+                    <option> Mi ubicación </option>
+                </select>
+            </div>
+            <div class="input-group col-xs-6 col-md-6 Sin_Padding_izquierdo">
+                <input type="text" class="form-control" aria-label="...">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default btn-negro"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            </div>
+        </div>
+
+        <!--Resultados de busqueda-->
+        <div class="row resultados-row">
+            <div class="col-md-offset-1 col-md-5">
+                <h3>Resultados de busqueda</h3>
+            </div>
+            <div class="col-md-offset-4 col-md-2">
+                <!--<select class="form-control">
+                    <option selected> Ordenar </option>
+                    <option> Alfabeto </option>
+                    <option> Más visitados </option>
+                </select>-->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Ordenar
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Alfabeto</a></li>
+                        <li><a href="#">Más visitados</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Resultados_libros-->
+        <div class="container-fluid resultados-container">
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <div class="iamgen-thumbnail"> </div>
+                    <div class="caption">
+                        <h4>Thumbnail label</h4>
+                        <h6>Propietatio:  <a href="#">Raul Ruvalcaba</a></h6>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <nav aria-label="..." class="barra_paginacion">
+            <ul class="pagination pagination-lg">
+                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li class=""><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">5 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#" aria-label="next"><span aria-hidden="true">&raquo;</span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!--Modal radio-->
+    <div class="modal fade bd-example-modal-sm" id="myModal">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Radio</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group">
+                        <label class="input-group-item">En un radio de</label>
+                        <input class="km_text input-group-item" type="text" disabled name="radio_text" id="radio_text">
+                        <label class="input-group-item">Km</label>
+                        <br>
+                        <br>
+                        <input type="range" name="radio_range" id="radio_range" min="1" max="200" step="1" onchange="">
+                    </div>
+
+                    <!--<form id="annio_form">
+                        <section class="form-group">
+                            <label>En un radio de:</label>
+                            <input class="km_text" type="text" disabled name="radio_text" id="radio_text">
+                            <label>Km</label>
+                            <input type="range" name="radio_range" id="radio_range" min="1" max="200" step="1" onchange="">
+                        </section>
+                    </form>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <p>
+                    © 2016 LibroMatico
+                </p>
+                <p>
+                    Número de usuarios: 234343
+                </p>
+                <p>
+                    Número de prestados realizados: 1345333
+                </p>
+                <p>
+
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <blockquote>
+                    <p>"El que lee mucho y anda mucho, ve mucho y sabe mucho."</p>
+                    <footer> Miguel de Cervantes (1547-1616) Escritor español.</footer>
+                </blockquote>
+            </div>
+            <div class="copyright col-xs-12">
+                <div class="text-center">
+                    <p>
+                        Made in Chile <span>CL</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/js/jquery.min.js"></script>
+<!-- JS -->
+<script src="/js/bootstrap.min.js"></script>
+
+
+<script>
+    function mymodal(value_Selected) {
+        console.log(value_Selected);
+        console.log(value_Selected.option);
+        console.log(value_Selected.value);
+        console.log(value_Selected.id);
+        if (value_Selected.value == "Mi ubicación") {
+            $('#myModal').modal('show');
+        }
+    };
+    $('#myModal').modal('hide');
+</script>
+
+<!--Radio-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#radio_range').change(function () {
+            $('#radio_text').val($(this).val());
+        });
+    });
+</script>
+<!--<script>
+    $(".dropdown-menu li a").click(function () {
+        $(".btn:first-child").html($(this).text() + ' <span class="caret"></span>');
+    });
+</script>-->

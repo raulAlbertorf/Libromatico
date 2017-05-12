@@ -1,0 +1,21 @@
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Libros.Models\Libros.Models\bin\Debug\Libros.Models.dll
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Libros.Models\Libros.Models\bin\Debug\Libros.Models.pdb
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Libros.Models\Libros.Models\obj\Debug\Libros.Models.csprojResolveAssemblyReference.cache
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Libros.Models\Libros.Models\obj\Debug\Libros.Models.dll
+\\vmware-host\shared folders\documents\visual studio 2015\Projects\Libros.Models\Libros.Models\obj\Debug\Libros.Models.pdb
+C:\Users\aaa\Desktop\Libromatico\trunk\LibroMatico\Libros.Models\obj\Debug\Libros.Models.csprojResolveAssemblyReference.cache
+C:\Users\aaa\Desktop\Libromatico\trunk\LibroMatico\Libros.Models\obj\Debug\Libros.Models.dll
+C:\Users\aaa\Desktop\Libromatico\trunk\LibroMatico\Libros.Models\obj\Debug\Libros.Models.pdb
+C:\Users\aaa\Desktop\Libromatico\trunk\LibroMatico\Libros.Models\bin\Debug\Libros.Models.dll
+C:\Users\aaa\Desktop\Libromatico\trunk\LibroMatico\Libros.Models\bin\Debug\Libros.Models.pdb
+C:\Users\aaa\Desktop\Libromatico\trunk\LibroMatico\Libros.Models\bin\Debug\MySql.Data.dll
+C:\Users\aaa\Desktop\Libromatico\trunk\LibroMatico\Libros.Models\bin\Debug\MySql.Data.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.Models\bin\Debug\Libros.Models.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.Models\bin\Debug\Libros.Models.pdb
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.Models\bin\Debug\log4net.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.Models\bin\Debug\MySql.Data.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.Models\bin\Debug\MySql.Data.xml
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.Models\obj\Debug\Libros.Models.csprojResolveAssemblyReference.cache
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.Models\obj\Debug\Libros.Models.csproj.ResolveComReference.cache
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.Models\obj\Debug\Libros.Models.dll
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\Libros.Models\obj\Debug\Libros.Models.pdb

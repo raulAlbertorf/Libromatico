@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewBag.Title = "Ingresar";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/Contents/css/cuenta.css" />
+    <link rel="stylesheet" href="~/Contents/css/CountrySelector/countrySelect.css">
+}
+
+@section Scripts
+{
+    <script type="text/javascript" src="~/Contents/js/sinBuscar.js"></script>
+    <script type="text/javascript" src="~/Contents/js/CountrySelector/countrySelect.js"></script>
+    <script type="text/javascript" src="~/Contents/js/ValidatorForms/jquery.validate.js"></script>
+    <script>
+		    $("#country_selector").countrySelect({
+			    defaultCountry: "cl",
+			    preferredCountries: ['cl', 'us', 'mx']
+		    });
+    </script>
+
+}
+
+<div class="container">
+    <div class="lm-ingreso">
+        <div id="formulario" class="row">
+            <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <b>Ingresar</b>
+                    </div>
+                    <div class="panel-body">
+                        @using (Html.BeginForm("Ingresar", "Cuenta", FormMethod.Post))
+                        {
+                            <div class="form-group">
+                                <label for="Email"> Correo Electrónico </label>
+                                <input name="Email" type="email" class="form-control" maxlength="80" placeholder="Su correo electrónico" value="" required/>
+                                <br>
+                                <label for="Password"> Contraseña </label>
+                                <input name="Contrasena" type="password" class="form-control" maxlength="10" placeholder="Su contraseña" value="" required/>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-success btn-lg pull-right">Ingresar</button>
+                            </div>
+                            <div>
+                                <a href="#" type="button" class="btn btn-link" data-toggle="modal" data-target="#OlvidePassword">¿Olvidaste tu contraseña?</a>
+                            </div>
+                        }
+                    </div>
+                    <div class="panel-footer">
+                        Aún no tienes cuenta?
+                        <a href="#" data-toggle="modal" data-target="#RegistroModal"> Regístrate aquí!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="RegistroModal" class="modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Registro</h4>
+            </div>
+            @using (Html.BeginForm("Crear", "Cuenta", FormMethod.Post))
+            {
+                <div class="modal-body">
+                    <p>Ingrese sus datos a continuación para registrarse.</p>
+
+                    <div class="form-group">
+                        <label for="Email">Email:</label>
+                        <input class="form-control" name="Email" placeholder="Su Email"  type="email" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Contrasena">Contraseña:</label>
+                        <input class="form-control" name="Contrasena" placeholder="Su contraseña" maxlength="10" type="password" value="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Nombre">Nombre:</label>
+                        <input class="form-control" name="Nombre" placeholder="Su Nombre" type="text" value="">
+                    </div>
+                    <div class="form-group">
+                        <label for="Nacionalidad">Nacionalidad:</label>
+                        <input class="form-control" id="country_selector" name="Nacionalidad" maxlength="50" type="text" required readonly>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-primary" value="Registrame" type="submit" />
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<div id="OlvidePassword" class="modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Registro</h4>
+            </div>
+            @using ( Html.BeginForm( "OlvidePassword" , "Cuenta" , FormMethod.Post ) )
+            {
+                <div class="modal-body">
+                    <p>Ingrese su correo de recuperación.</p>
+
+                    <div class="form-group">
+                        <label for="Email">Email:</label>
+                        <input class="form-control" name="Email" placeholder="Su Email" maxlength="80" type="text" value="" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input class="btn btn-primary" value="Recuperar" type="submit" />
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

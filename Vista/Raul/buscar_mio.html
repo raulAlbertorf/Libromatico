@@ -1,0 +1,633 @@
+<!DOCTYPE html>*//
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LibroMatico</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/datepicker.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/buscar.css">
+
+</head>
+
+<body>
+
+    <section class="container-fluid">
+        <header class="row">
+            <section class="col-lg-12">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
+                    <section class="container-fluid">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="#">LibroMatico</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                        </div>
+
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">Inicio</a></li>
+                                <li class="active"><a href="#">Buscar</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <span class="glyphicon glyphicon-user"></span> Cuenta
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#">Login</a></li>
+                                        <li><a href="#">Registrar</a></li>
+                                        <li><a href="#">Recuperar Contraseña</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                </nav>
+            </section>
+        </header>
+    </section>
+
+    <section class="container-fluid" style="margin-top : 40px;">
+        <section class="row">
+            <section class="col-lg-12 contenido">
+                <ol class="breadcrumb">
+                    <li><a href="#">LibroMatico</a></li>
+                    <li><a href="#">Inicio</a></li>
+                    <li class="active">Buscar</li>
+                </ol>
+
+
+                <section class="col-lg-3 ">
+                    <div class="container-fluid">
+                        <div class="navbar-toggle btn-group btn-group-justified Sin_Padding" role="group" aria-label="...">
+                            <div class="btn-group boton_filtroBusqueda" role="group">
+                                <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#collapseExample" aria-expanded="true" aria-controls="collapseExample">Filtro de busqueda
+                                    <span class="glyphicon glyphicon-menu-hamburger"></span></button>
+                            </div>
+                        </div>
+
+
+                        <div class="col-lg-12 bloque_Izquierdo collapse navbar-collapse" id="collapseExample">
+                            <div class="page-header">
+                                <h3>Filtro de busqueda</h3>
+                            </div>
+                            <div class="container-fluid">
+
+                                <h4>Buscar por</h4>
+                                <form role="form">
+                                    <section class="form-group">
+                                        <section class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="checkbox_1">Titulo</label>
+                                        </section>
+                                        <section class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="checkbox_2">Autor</label>
+                                        </section>
+                                        <section class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="checkbox_3">Resumen</label>
+                                        </section>
+                                        <section class="checkbox">
+                                            <!--<label>
+                                            <input type="checkbox" value="checkbo_3" data-toggle="modal" data-target="#myModal">Propiedades</label>-->
+                                            <label>
+                                                <input type="checkbox" value="checkbox_4" id="checkbox_4" onclick="validacion_checkbox_propiedades(this);">Propiedades</label>
+                                        </section>
+                                        <section class="checkbox">
+                                            <label>
+                                                <input type="checkbox" id="checkbox_5" onclick="validacion_checkbox_ubicacion(this);">Mi ubucación</label>
+                                        </section>
+                                    </section>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="col-lg-9 bloque_Derecho">
+                    <div class="container-fluid">
+                        <div class="input-group text_Buscar">
+                            <input type="text" class="form-control" placeholder="Search for...">
+                            <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Buscar</button>
+                    </span>
+                        </div>
+                        <div class="col-lg-12 bloque_resultados_busqueda">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <h3 class="titulo_resultados">Resultados</h3></div>
+                                <div class="col-lg-6">
+                                    <div class="dropdown pull-right">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                            Ordenar
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="#">Alfabeto</a></li>
+                                            <li><a href="#">mas visitados</a></li>
+                                            <!--<li><a href="#">Something else here</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>-->
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                            
+                            <!-- <div class="list-group">
+                                <a href="#" class="list-group-item">
+                                    <figure class="flotada_izquierda pull-left">
+                                        <img class="imagen_resultados" src="http://lorempixel.com/400/200/" />
+                                    </figure>
+                                    <h4 class="list-group-item-heading">First List Group Item Heading</h4>
+                                    <p class="list-group-item-text">List Group Item Text</p>
+                                    <div class="clearfix"></div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <figure class="flotada_izquierda pull-left">
+                                        <img class="imagen_resultados" src="http://lorempixel.com/400/200/" />
+                                    </figure>
+                                    <h4 class="list-group-item-heading">First List Group Item Heading</h4>
+                                    <p class="list-group-item-text">List Group Item Text</p>
+                                    <div class="clearfix"></div>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <figure class="flotada_izquierda pull-left">
+                                        <img class="imagen_resultados" src="http://lorempixel.com/400/200/" />
+                                    </figure>
+                                    <h4 class="list-group-item-heading">Third List Group Item Heading</h4>
+                                    <p class="list-group-item-text">List Group Item Text</p>
+                                    <div class="clearfix"></div>
+                                </a>
+
+                                <a href="#" class="list-group-item">
+                                    <figure class="flotada_izquierda pull-left">
+                                        <img class="imagen_resultados img-responsive" src="http://lorempixel.com/400/200/" />
+                                    </figure>
+                                    <h4 class="list-group-item-heading">First List Group Item Heading</h4>
+                                    <p class="list-group-item-text">List Group Item Text</p>
+                                    <div class="clearfix"></div>
+                                </a>
+                            </div>-->
+
+
+                            <div class="container-fluid bloque_resultados">
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 1</h3>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 2</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 3</h3>
+                                                    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 3</h3>
+                                                    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption ">
+                                                    <h3>Item 1</h3>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 2</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 3</h3>
+                                                    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 3</h3>
+                                                    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 1</h3>
+                                                    <p></p>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 2</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 3</h3>
+                                                    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-sm-4 col-md-3 col-xs-6">
+                                        <a role="button" href="Item.html">
+                                            <div class="thumbnail resultado_item">
+                                                <img class="imagen_resultados2 img-responsive" src="http://lorempixel.com/400/200/" />
+                                                <div class="caption">
+                                                    <h3>Item 3</h3>
+                                                    <!--<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>-->
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+
+                                <ul class="pager">
+                                    <li class="previous"><a href="#"><span class="glyphicon glyphicon-chevron-left"></span>Previous</a></li>
+                                    <li class="next"><a href="#">Next<span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+        </section>
+    </section>
+
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+
+        <div class="modal-dialog">
+
+
+            <!-- Modal Propiedades-->
+
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" onclick="validacion_cerrar_propiedades(this);" data-dismiss="modal">&times;</button>
+
+                    <h4 class="modal-title">Propiedades</h4>
+
+                </div>
+                <div class="modal-body">
+
+                    <!--Editorial-->
+                    <form role="form" id="editorial_form">
+                        <div class="form-group">
+                            <label class="label-control" for="lista_editorial">Editorial:</label>
+                            <select class="form-control" id="lista_editorial">
+                                <option>Selecciona un Editorial...</option>
+                                <option>Salamanca</option>
+                                <option>Editorial Planeta</option>
+                                <option>Penguin Random House Grupo</option>
+                                <option>Editorial Santillana</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <!--Anio-->
+                    <form role="form" id="annio_form">
+                        <section class="form-group propiedad_annio">
+                            <label for="lista_alumno">Año:</label>
+                            <input type="text" disabled name="annio_text" id="annio_text">
+                            <input type="range" name="annio_range" id="annio_range" min="1980" max="2016" step="1" onchange="">
+                        </section>
+                    </form>
+
+                    <!--Categoria-->
+                    <form role="form" id="categoria_form">
+                        <section class="form-group">
+                            <label class="label-control" for="lista_alumno">Categoria:</label>
+                            <select class="form-control" id="lista_alumno">
+                                <option>Selecciona un Categoria...</option>
+                                <option>Ciencia ficciòn & Fantasia</option>
+                                <option>Misterio & Sustenso</option>
+                                <option>Romanticos</option>
+                                <option>Infantiles</option>
+                                <option>Biografias & Memorias</option>
+                                <option>Literatura & Ficción</option>
+                                <option>Artes y fotografía</option>
+                                <option>Cocina y Reposteria</option>
+                                <option>Historia</option>
+                                <option>Jovenes & Adultos</option>
+
+                            </select>
+                        </section>
+                    </form>
+
+                    <!--Tomo-->
+                    <form role="form" id="tomo_form">
+                        <div class="form-group">
+                            <label for="Seleccion_Tomo">Tomo:</label>
+                            <select class="form-control" id="Seleccion_Tomo">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <!--Idioma-->
+                    <form role="form" id="idioma_form">
+                        <div class="form-group">
+                            <label for="Seleccion_Tomo">Idioma:</label>
+                            <select class="form-control" id="Seleccion_Tomo">
+                                <option>Inglès</option>
+                                <option>Español</option>
+                                <option>Alemàn</option>
+                                <option>Francès</option>
+                                <option>Chino</option>
+                                <option>Portuguès</option>
+                            </select>
+                        </div>
+                    </form>
+
+                    <!--NumPaginas-->
+                    <form role="form" id="numPaginas_form">
+                        <section class="form-group">
+                            <label for="lista_alumno">Número de páginas:</label>
+                            <select class="form-control" title='Selecciona un Alumno...' id="lista_alumno">
+                                <option value="" selected>Número de paginas...</option>
+                                <option valaue="clave_alumno">0 - 100</option>
+                                <option>100 - 300</option>
+                                <option>300 - 600</option>
+                                <option>600 - mas</option>
+                            </select>
+                        </section>
+                    </form>
+
+                    <!--Fecha-->
+                    <!--<form role="form" id="fecha_form">
+                        <label class="etiqueta" for="fecha_inicio">Fecha:</label>
+                        <div class="input-append date datepicker no-padding" data-date-format="yyyy/mm/dd">
+                            <input id="fecha_inicio" type="text" disabled><span class="add-on"> <i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                    </form>-->
+
+                    <!--Botón_Continuar-->
+                    <button type="submit" class="btn btn-default" data-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal ubicacion-->
+    <div id="Modal_ubicacion" class="modal fade" role="dialog">
+
+        <div class="modal-dialog">
+
+            <!-- contenido del modal-->
+
+            <div class="modal-content">
+                <div class="modal-header">
+
+                    <button type="button" class="close" onclick="validacion_cerrar_ubicacion(this);" data-dismiss="modal">&times;</button>
+
+                    <h4 class="modal-title">Ubicación</h4>
+
+                </div>
+                <div class="modal-body">
+                    <!--Región-->
+                    <form role="form" id="region_form">
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Región
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Alfabeto</a></li>
+                                    <li><a href="#">mas visitados</a></li>
+                                    <!--<li><a href="#">Something else here</a></li>
+                                            <li role="separator" class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+                    <!--Ciudad-->
+                    <form role="form" id="region_form">
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    Ciudad
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    <li><a href="#">Alfabeto</a></li>
+                                    <li><a href="#">mas visitados</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!--Botón_Continuar-->
+                    <button type="submit" class="btn btn-default" data-dismiss="modal">Continuar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<footer>
+    <section class="container">
+        <section class="col-lg-12">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-footer">
+                        <a class="navbar-brand" href="#">
+                            <img alt="Brand" src="...">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+
+        </section>
+    </section>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<script src="/js/jquery-1.11.3.min.js"></script>
+
+<!-- JS -->
+<script src="js/bootstrap.min.js"></script>
+
+<!--Datepicker-->
+<script src="../js/bootstrap-datepicker.js"></script>
+
+<!--Calendario-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.datepicker').datepicker();
+
+        $("#set_date").click(function () {
+            $('.datepicker').datepicker("setDate", date);
+        });
+    });
+</script>
+
+<!--Annios-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#annio_range').change(function () {
+            $('#annio_text').val($(this).val());
+        });
+    });
+</script>
+
+<!--Modal-->
+<script>
+    function validacion_checkbox_propiedades(theCheckbox) {
+        console.log(theCheckbox);
+        if (theCheckbox.checked)
+            $('#myModal').modal('show');
+    }
+
+    function validacion_checkbox_ubicacion(theCheckbox) {
+        console.log(theCheckbox);
+        if (theCheckbox.checked)
+            $('#Modal_ubicacion').modal('show');
+    }
+
+    function validacion_cerrar_propiedades(buttonClose) {
+        if (buttonClose) {
+            console.log(buttonClose);
+            console.log(true);
+            //document.getElementById("checkbox_4").checked = false;
+            //$("#checkbox_4").prop("checked", false);
+            $("#checkbox_4").attr("checked", false);
+            document.getElementById("editorial_form").reset();
+            document.getElementById("annio_form").reset();
+            document.getElementById("categoria_form").reset();
+            document.getElementById("tomo_form").reset();
+            document.getElementById("idioma_form").reset();
+            //document.getElementById("fecha_form").reset();
+            document.getElementById("numPaginas_form").reset();
+            //annio_form
+            //categoria_form
+            //tomo_form
+            //idioma_form
+            //fecha_form
+            //numPaginas_form
+        }
+    }
+
+    function validacion_cerrar_ubicacion(buttonClose) {
+        if (buttonClose) {
+            console.log(buttonClose);
+            console.log(true);
+            //document.getElementById("checkbox_4").checked = false;
+            //$("#checkbox_4").prop("checked", false);
+            $("#checkbox_5").attr("checked", false);
+            //document.getElementById("editorial_form").reset();
+        }
+
+    }
+
+    //$('#myModal').modal('show');
+    //$('#myModal').modal({ show: false})
+</script>
+
+
+
+
+
+</html>

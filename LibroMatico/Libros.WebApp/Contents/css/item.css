@@ -1,0 +1,9 @@
+﻿body {
+}
+.textarea{
+    resize: none;
+}
+
+.dropdown {
+    display: inline-block;
+}

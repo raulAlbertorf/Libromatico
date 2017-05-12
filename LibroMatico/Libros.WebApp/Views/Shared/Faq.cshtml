@@ -1,0 +1,248 @@
+﻿
+@{
+    ViewBag.Title = "Preguntas Frecuentes";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@section Scripts{
+
+
+}
+
+@section Styles{
+
+    <link rel="stylesheet" href="~/Contents/css/faq.css" />
+    <link rel="stylesheet" href="~/Contents/css/dotText.css" />
+}
+
+<div class="container">
+    <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-1">
+        <h1>Preguntas Frecuentes</h1>
+        <br>
+    </div>
+    <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1">
+        <div class="tab-content">
+            <div class="tab-pane active in fade" id="cuenta-tab">
+                <div class="panel-group">
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#libromatico-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Qué es Libromático?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="libromatico-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Libromático es una aplicación sin fines de lucro en la que puedes compartir tus libros, fomentando así la lectura.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#cuenta-crear-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Cómo crearme una cuenta?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="cuenta-crear-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Para crear una cuenta accede <a href="@Url.Action("Ingresar", "Cuenta")">aquí</a>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#cuenta-gestionar-perfiles-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Por qué debo tener una cuenta?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="cuenta-gestionar-perfiles-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Tener una cuenta te da la posibilidad, no sólo de ver los items disponibles, si no que además compartir tus items y que los demás usuarios compartan items contigo.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#perfil-funcion-faq">
+                                <h4 class="panel-title dot-text dot-text">
+                                    ¿De qué me sirve tener más de un perfil?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="perfil-funcion-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Te permite tener distintas representaciones; tu puedes ser el dueño de una librería, 
+                                un estudiante y a la vez una persona natural. Además puedes tener una ubicación distinta para cada perfil, 
+                                por ejemplo: siendo dueño de una librería que habita en Chile y un estudiante que vive en China!. 
+
+                                Además que puedes hacer búsquedas de items por ubicación, lo que te hace tener al alcance mayor 
+                                cantidad de libros.
+                                <br>
+                                <br>
+                                <strong>Máximo de perfiles:</strong> 5
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#item-poseer-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Cuántos Items puedo tener?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="item-poseer-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Todos los que tu quieras!.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#perfil-agregar-item-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Cómo agregar un nuevo item?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="perfil-agregar-item-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Para agregar un nuevo item necesitas darle un nombre y un resumen (reseña). Necesitas estar autenticado para agregar
+                                un item. Si lo estás, debes entrar a tu perfil y dar click en <strong>Agregar Item</strong>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#perfil-eliminar-item-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Cómo eliminar uno de mis items?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="perfil-eliminar-item-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Puedes eliminar un item cuando quieras siempre y cuando éste no esté siendo partícipe de un préstamo. De ser así, haces click
+                                en el ícono eliminar representado por una X en su esquina superior derecha.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#item-editar-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Cómo editar uno de mis items?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="item-editar-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Si estás autenticado y tienes items que deseas editar, debes ir a tu perfil y hacer click en alguno.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#item-agregar-prop-faq">
+                                <h4 class="panel-title dot-text dot-text">
+                                    ¿Para qué sirve la opción de agregar propiedad a un item?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="item-agregar-prop-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Tu puedes asignarle características a un item como por ejemplo: año, ISBN, edición, color, etc.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#item-disp-faq">
+                                <h4 class="panel-title dot-text dot-text">
+                                    ¿Puedo cambiar la disponibilidad de mis items?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="item-disp-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Tus items pueden estar disponible como no estarlos. Si estás autenticado, puedes cambiar su 
+                                disponibilidad accediendo a tu perfil y moviendo el switch de izquierda a derecha cambias la disponibilidad.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#prestamo-ver-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Cómo ver un préstamo?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="prestamo-ver-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Si quieres ver tus préstamos, debes hacer click en el botón del extremo superior derecho y se despliegan 2 opciones:
+                                <br>
+                                <ul>
+                                    <li>
+                                        <strong>Mis Solicitudes:</strong> Los items que yo he solicitado.
+                                    </li>
+                                    <li>
+                                        <strong>Mis Préstamos:</strong> Los items que yo he prestado.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#prestamo-solicitar-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Cómo solicitar un préstamo?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="prestamo-solicitar-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Para solicitar un item debes estar autenticado. Si lo estás, puedes buscar un item que deseas solicitar haciendo click <a href="@Url.Action("Index", "Home")">aquí</a>. Entra al detalle del item y hacer click en <strong>Solicitar</strong>.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-faq">
+                        <div class="panel-heading">
+                            <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#prestamo-cancelar-faq">
+                                <h4 class="panel-title dot-text">
+                                    ¿Cómo cancelar un préstamo?
+                                    <span class="pull-right span-icono"><i class="glyphicon glyphicon-chevron-down icono-despliegue"></i></span>
+                                </h4>
+                            </a>
+                        </div>
+                        <div id="prestamo-cancelar-faq" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Debes estar autenticado para cancelar un préstamo. Si lo estás, puedes ver tus préstamos entrando <strong>Mis Préstamos</strong> en el extremo superior derecho. Una vez dentro, puedes elegir
+                                un préstamo y darle click a <strong>Cancelar</strong>.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

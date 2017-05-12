@@ -1,0 +1,42 @@
+body 
+{
+    background-color: black;
+}
+
+.flex-container 
+{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.img-perfil 
+{
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 0 auto;
+}
+
+.nombre-perfil 
+{
+  font-size: large;
+  color: white;
+}
+
+.titulo-perfiles 
+{
+  color: white;
+}
+
+.fade
+{
+  opacity:0.5;
+}
+.fade:hover
+{
+  opacity:1;
+}

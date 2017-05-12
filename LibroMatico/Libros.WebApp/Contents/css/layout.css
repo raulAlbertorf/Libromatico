@@ -1,0 +1,136 @@
+﻿/* Remover bordes redondeados */
+* {
+    border-radius: 0 !important;
+}
+
+#wrapper {
+  display: block;
+  background: transparent url("/Contents/img/background/bg-pattern.jpg") repeat scroll center 0px;
+}
+
+#header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.navbar-lm-white {
+    background-color: white;
+    margin-bottom: 0px;
+}
+
+.navbar-search {
+	padding: 5px;
+	background-color: #ffffff;
+    border: 1px solid #e7e7e7;
+}
+
+ul.dropdown-solicitudes{
+    min-width:300px;
+    max-height: 500px;
+    overflow-x: hidden;
+}
+
+ul.dropdown-solicitudes li .item{
+    display:block;
+    padding:3px 10px;
+    margin: 3px 0;
+}
+
+ul.dropdown-solicitudes li .item:hover{
+    background-color:#f3f3f3;
+}
+
+ul.dropdown-solicitudes li .item:after{
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.badge-notify{
+       background:red;
+       left:0;
+       bottom: 10px;
+       position: absolute !important;
+       border-radius: 50px !important;
+}
+
+.btn .btn-default .btn-lg .btn-link{
+  font-size:16px; padding: 13px 16px;
+}
+
+.icono{
+  color: #32CC73 !important; 
+}
+
+#content {
+    padding-bottom: 10px;
+}
+
+/**footer**/
+
+#footer {
+	border-top: 1px solid #e7e7e7;
+}
+
+.texto-verde {
+    color: #32CC73 !important; 
+}
+
+.texto-azul {
+	color: #3357cc !important;
+}
+.letra-lobster{
+    font-family: 'Lobster', cursive !important;
+}
+
+.item-solicitud{
+  margin-left: 10px !important; 
+  margin-right: 10px !important; 
+  margin-top: 10px !important; 
+  margin-bottom: 15px !important;
+}
+
+.titulo-item-solicitud {
+  font-size: 15px;
+}
+
+.nombre-solicitante{
+  font-size: 12px;
+}
+
+.item-imagen{
+  width:50px !important; 
+  height:75px !important;
+}
+
+.divider-solicitudes{
+  background-color: #ECECEB;
+}
+
+.badge-solicitudes{
+  background-color: red;
+  -moz-border-radius: 30px; 
+  border-radius: 30px;
+}
+
+.ver-todas{
+  font-size: 15px;
+}
+
+.sin-solicitudes{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.sin-margen {
+	margin: 0px;
+}
+
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}

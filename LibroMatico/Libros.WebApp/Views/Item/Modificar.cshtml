@@ -1,0 +1,74 @@
+﻿@model Libros.Models.Item
+@{
+    ViewBag.Title = "Modificar";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+
+<ol class="breadcrumb" style="margin-top:10px;">
+    <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+    <li class="active">@Html.ActionLink("Busqueda", "Busqueda", "Home")</li>
+</ol>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-sm-offset-3 col-md-offset-3">
+            <div class="panel panel-default panel-shadow">
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center">Modificar Item</h2>
+                </div>
+                <div class="panel-body">
+                    <!-- Modal content-->
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inTitulo" class="control-label col-xs-3">Titulo</label>
+                            <div class="col-xs-9">
+                                <input type="text" class="form-control" id="inTitulo" placeholder="Titulo">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Resumen" class="control-label col-xs-3"></label>
+                            <div class="col-xs-9">
+                                <textarea id="inResumen" class="form-control" placeholder="Resumen"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inImagen" class="control-label col-xs-3">Imagen</label>
+                            <div class="col-xs-9">
+                                <div class="input-group">
+                                    <input type="text" id="inImagen" class="form-control" aria-label="...">
+                                    <div class="input-group-btn">
+                                        <button type="button" class="btn btn-default dropdown-toggle">
+                                            Abrir
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Propiedades</label>
+                            <div class="col-xs-9">
+                                <button class="btn btn-default btn-xs" type="button" id="btAdd">
+                                    <span class="glyphicon glyphicon-plus"></span>
+                                </button>
+                                <button class="btn btn-default btn-xs" type="button" id="btRemove">
+                                    <span class="glyphicon glyphicon-minus"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div id="main" class="panel-default">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-success" id="submit" data-dismiss="modal">Modificar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

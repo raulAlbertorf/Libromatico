@@ -1,0 +1,281 @@
+﻿@model Libros.Models.Perfil
+
+@{
+    ViewBag.Title = "Detalles Perfil";
+    Layout = "~/Views/_Layout.cshtml";
+    var Perfil_Activo = Libros.WebApp.Utils.SessionManager.PerfilActivo();
+    var Cuenta_Activa = Libros.WebApp.Utils.SessionManager.CuentaActiva();
+}
+@section Styles{
+
+    <!-- CSS -->
+    <link href="~/Contents/css/post.css" rel="stylesheet">
+
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="~/Contents/css/imagen.css">
+    <link rel="stylesheet" href="~/Contents/js/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="~/Contents/js/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="~/Contents/css/perfil.css">
+    <link rel="stylesheet" href="~/Contents/css/modificarImagen.css">
+    <link rel="stylesheet" href="~/Contents/css/circleButton.css">
+    <link rel="stylesheet" href="~/Contents/css/dotText.css">
+}
+
+@section Scripts{
+
+    <!-- Include Owl js plugin  return { success: data }; -->
+    <script src="~/Contents/js/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Contents/js/perfil.js"></script>
+    <script src="~/Contents/js/imagen.js"></script>
+
+    <script type="text/javascript">
+        function activadoDisp(Perfil_Id, Item_Id, checkbox) {
+            var estado = checkbox.checked;
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Disponibilidad", "Perfil")",
+                dataType: 'json',
+                quietMillis: 250,
+                data: { "Perfil_Id": Perfil_Id, "Item_Id": Item_Id, "estado": estado },
+                success: function (data) {
+                    var verde = "<label id='estado_id_" + Item_Id + "'><span class='label label-success' style='margin-bottom:20px;'>Disponible</span></label>";
+                    var rojo = "<label id='estado_id_" + Item_Id + "'><span class='label label-danger' style='margin-bottom:20px;'>No disponible</span></label>";
+                    if (estado) {
+                        $("#estado_id_" + Item_Id).replaceWith(verde);
+                    }
+                    else {
+                        $("#estado_id_" + Item_Id).replaceWith(rojo);
+                    }
+                },
+                cache: true
+            });
+        };
+    </script>
+}
+
+<div class="container">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+        <li class="active">@Html.ActionLink("Perfil", "Detalles", new { id = Model.Id })</li>
+    </ol>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-5 col-xs-12">
+                <div class="thumbnail">
+                    @if (Cuenta_Activa != null && Perfil_Activo != null && Perfil_Activo.Id == Model.Id)
+                    {
+                        <div class="img-wrapper showhim">
+                            <img alt="perfil_image" class="center-block" src="~/Contents/img/@Model.UrlImagen" style="width:170px; height:170px">
+                            <div class="img-overlay showme">
+                                <a class="btn btn-success btn-circle btn-xl" data-toggle="modal" data-target="#Imagen">
+                                    <i class="glyphicon glyphicon-pencil"></i>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <img alt="perfil_image" class="center-block" src="/Contents/img/@Model.UrlImagen" style="width:170px; height:170px">
+                    }
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-5 col-xs-12 col-md-offset-0">
+                <div class="panel-body">
+                    <p class="text-justify">
+                        <h3>@Model.Nombre</h3>
+                        <h4>@Model.Nacionalidad</h4>
+                </div>
+            </div>
+            @{
+
+                if (Perfil_Activo != null && Model.Id == Perfil_Activo.Id)
+                {
+                    <div class="col-md-3 col-sm-5 col-xs-12 col-md-offset-2">
+                        <div class="row">
+                            <a class="btn btn-success pull-right" aria-label="Left Align"
+                               href="@Url.Action("Crear", "Item", new { id = Model.Id })"
+                               style="margin-bottom:10px; margin-right:15px;">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Agregar Ítem
+                            </a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+    <div class="row">
+
+        @{
+            var items = Model.MisItems().Take(4);
+            if (items.Count() > 6)
+            {
+                <div class="col-xs-12 text-right"> <a class="btn btn-xs" href="@Url.Action("MisItems", "Perfil", new { page = 1, id = Model.Id })"><i class="fa fa-angle-down"></i> Ver todos</a> </div>
+            }
+            foreach (var item in items)
+            {
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading clearfix" style="background: white;">
+                            <div class="pull-left">
+                                <h4>
+                                    <p class="text-primary dot-text"> @Html.ActionLink(item.Key.Titulo, "Detalles", "Item", new { id = item.Key.Id }, null) </p>
+                                </h4>
+                            </div>
+                            <div class="pull-right">
+                                @using (Html.BeginForm("Eliminar", "Item", new { Item_Id = item.Key.Id, Perfil_Id = Model.Id }, FormMethod.Post))
+                                {
+                                    <button class="close">&times;</button>
+                                }
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-4 col-xs-12">
+                                    <a href="@Url.Action("Detalles", "Item", new { id = item.Key.Id })">
+                                        <img class="media-object center-block" src="/Contents/img/@item.Key.UrlImagen" alt=".." style="width:100px; height:150px;">
+                                    </a>
+                                </div>
+                                <div class="col-md-9 col-sm-8 col-xs-12">
+                                    @{
+                                        var autores = item.Key.Autores();
+
+                                        if (autores.Count > 0)
+                                        {
+                                            <medium>Escrito por: </medium>
+                                            var ultimo = autores.Last();
+
+                                            foreach (var autor in autores)
+                                            {
+                                                if (autor.Equals(ultimo) && autores.Count() > 1) //Si es el último autor y no el único en la lista
+                                                {
+                                                    <medium>
+                                                        y @Html.ActionLink(autor.Nombre, "Busqueda", "Home", new { buscar = autor.Nombre, filtro = 2 }, null)
+                                                    </medium>
+                                                }
+                                                else if (autores.Count() == 1)
+                                                {
+                                                    @Html.ActionLink(autor.Nombre, "Busqueda", "Home", new { buscar = autor.Nombre, filtro = 2 }, null)
+                                                }
+                                                else
+                                                {
+                                                    <medium>
+                                                        @Html.ActionLink(autor.Nombre, "Busqueda", "Home", new { buscar = autor.Nombre, filtro = 2 }, null)
+                                                    </medium>
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <medium>No se ha definido autor</medium>
+                                        }
+
+                                    }
+                                    <br />
+                                    @{
+                                        var log = Libros.WebApp.Utils.SessionManager.PerfilActivo();
+                                        if (log != null && Model.Id == log.Id)
+                                        {
+                                            {
+                                                long Prestamo_Id = item.Key.Prestamo_Aceptado_Id_Item();
+                                                Libros.Models.Prestamo prestamo = new Libros.Models.Prestamo();
+                                                prestamo.Seleccionar(Prestamo_Id);
+
+                                                if ((Convert.ToInt32(prestamo.Estado) == 2 || Convert.ToInt32(prestamo.Estado) == 3) && prestamo.Id != 0)
+                                                {
+                                                    <label>
+                                                        <span class="label label-primary" style="margin-bottom:20px;">En préstamo</span>
+                                                    </label>
+                                                }
+                                                else if (prestamo.Id == 0)
+                                                {
+                                                    if (!item.Value)
+                                                    {
+                                                        <label id="estado_id_@item.Key.Id">
+                                                            <span class="label label-danger" style="margin-bottom:20px;">No disponible</span>
+                                                        </label>
+                                                        <br />
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="bordeado" onchange="" id="checkbox @item.Key.Id"
+                                                                   onclick="activadoDisp(@item.Key.Propietario.Id, @item.Key.Id, this)">
+                                                            <div class="slider round"></div>
+                                                        </label>
+                                                    }
+                                                    else
+                                                    {
+                                                        <label id="estado_id_@item.Key.Id">
+                                                            <span class="label label-success" style="margin-bottom:20px;">Disponible</span>
+                                                        </label>
+                                                        <br />
+                                                        <label class="switch">
+                                                            <input type="checkbox" class="bordeado" checked="checked" id="@item.Key.Id"
+                                                                   onclick="activadoDisp(@item.Key.Propietario.Id, @item.Key.Id, this)">
+                                                            <div class="slider round"></div>
+                                                        </label>
+
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <p style="text-align: justify;">
+                                                <medium>Resumen:</medium>
+                                                @item.Key.Resumen
+                                            </p>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                        }
+        }
+    </div>
+</div>
+
+
+<div id="Imagen" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        @using (Html.BeginForm("CargarImagen", "Perfil", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+            {
+            <fieldset>
+                @Html.HiddenFor(Model => Model.Id)
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h3 class="modal-title text-center">Modificar Imagen</h3>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-horizontal">
+                            <div class="container-fluid">
+                                <label for="photo" class="col-xs-2">Imagen:</label>
+                                <div class="input-group  col-xs-10">
+                                    @*<label class="input-group-btn">
+                                            Abrir...
+                                            <input type="file" multiple="" id="photo" name="photo">
+                                        </label>*@
+                                    <input type="text" class="form-control input-sm filefield" placeholder="Url..." readonly="">
+                                    <span class="input-group-btn">
+                                        <label class="btn btn-warning btn-sm btn-file">
+                                            <span class="glyphicon glyphicon-camera"></span> Abrir
+                                            <input type="file" style="display: none;" id="photo" name="photo">
+                                        </label>
+                                    </span>
+                                </div>
+                                <br />
+                                <br />
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" value="Modificar" class="btn btn-success" />
+                        <button type="reset" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+</div>

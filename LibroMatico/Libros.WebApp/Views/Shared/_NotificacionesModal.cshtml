@@ -1,0 +1,39 @@
+﻿@{
+    var error = Libros.WebApp.Utils.UIWarnings.UltimoError();
+    var info = Libros.WebApp.Utils.UIWarnings.UltimaInfo();
+
+    if (!string.IsNullOrEmpty(error) || !string.IsNullOrEmpty(info))
+    {
+        <div id="NotificacionesModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        @if (!string.IsNullOrEmpty(error))
+                        {
+                            <h4 class="modal-title"><i class="fa fa-exclamation-circle"></i> <strong>Encontramos algunos errores!</strong></h4>
+                        }
+                        else
+                        {
+                            <h4 class="modal-title"><i class="fa fa-info-circle"></i>Información!</h4>
+                        }
+                    </div>
+                    <div class="modal-body">
+                        @if (!string.IsNullOrEmpty(error))
+                        {
+                            <div class="alert alert-danger" role="alert">
+                                <span class="fa fa-exclamation-sign" aria-hidden="true"></span>
+                                <span class="sr-only">Error:</span>
+                                @Html.Raw(error)
+                            </div>                            
+                        }
+                        @if (!string.IsNullOrEmpty(info))
+                        {
+                            @Html.Raw(info)
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

@@ -1,0 +1,19 @@
+    #owl-prestamos .item img{
+      display: block;
+      height: 171px;
+      width: 181px;
+    }
+    #owl-prestamos .item{
+      margin: 3px;
+    }
+
+    #owl-recibidos .item img{
+      display: block;
+      height: 171px;
+      width: 181px;
+    }
+    #owl-recibidos .item{
+      margin: 3px;
+    }
+
+   

@@ -1,0 +1,157 @@
+
+* {
+  border-radius: 0 !important;
+}
+
+.sombra_panel {
+
+}
+
+.contenido {
+    height: auto;
+}
+
+.Sin_Padding {
+    padding: 0px;
+}
+
+.bloque_izquierdo {
+    padding-right: 10px;
+}
+
+@media screen and (max-width:1199px) {
+    .bloque_Izquierdo {
+        text-align: justify;
+    }
+    input[type="range"] {
+        width: 250px;
+        height: 10px;
+    }
+}
+
+.bloque_Izquierdo h3 {
+    text-align: center;
+}
+
+.boton_filtroBusqueda {
+    padding-left: 40px;
+}
+
+.km_text {
+    width: 30px
+}
+
+.bloque_derecho {
+    padding-left: 5px;
+    padding-right: 20px;
+}
+
+.bloque_derecho h3 {
+    color: gray;
+}
+
+.bloque_resultados_busqueda div{
+    margin-bottom: 5px;
+}
+
+.bloque_resultados div div a:hover div {
+    background-color: lightgray;
+}
+
+.bloque_resultados div div a:hover div h3 {
+    color: white;
+}
+
+.bloque_resultados div div a:link {
+    text-decoration: none;
+}
+
+.bloque_resultados h3 {
+    color: gray;
+    font-size-adjust: auto;
+    font-size: 20px;
+    text-align: center;
+    font-family: inherit;
+    font-size-adjust: auto;
+}
+
+.bloque_derecho p {
+    text-align: justify;
+    font-family: inherit;
+}
+
+.titulo_resultados {
+    color: gainsboro;
+    font-size-adjust: auto;
+    margin: 0px;
+}
+
+
+/*.propiedad_annio input[type = "range"]:focus{
+  background-color: aqua;
+    border-bottom: 1px solid black;
+}*/
+
+.text_Buscar {
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width:1200px) {
+    .bloque_izquierdo {
+        padding: 0px;
+    }
+    .bloque_derecho {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .text_Buscar {
+        margin-top: 20px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-bottom: 10px;
+    }
+    .barra_paginacion ul li a {
+        font-size-adjust: auto;
+    }
+}
+
+.barra_paginacion {
+    text-align: center;
+}
+
+.barra_paginacion ul li a {
+    color: black;
+}
+
+.barra_paginacion ul li a:hover {
+    background-color: black;
+    color: white;
+}
+
+.barra_paginacion ul li a:focus {
+    background-color: black;
+    color: white;
+}
+
+input[type="range"] {
+    margin-top: 20px;
+    -webkit-appearance: none;
+    background-color: black;
+    height: 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    z-index: 1;
+    width: 10px;
+    height: 20px;
+    cursor: pointer;
+    background-color: white;
+    border: 3px solid black;
+}

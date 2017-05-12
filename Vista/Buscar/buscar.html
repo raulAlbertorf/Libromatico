@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>LibroMatico</title>
+
+    <!-- CSS -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!--CSS Buscar-->
+    <link href="/css/buscar.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--Barra superior-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">LibroMatico</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="buscar.html"> <span class="glyphicon glyphicon-search"></span> Buscar</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-equalizer"></span> Top
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Más vistos</a></li>
+                            <li><a href="#">últimos agregados</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <span class="glyphicon glyphicon-user"></span> Cuenta
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Login_Registro.html">Login</a></li>
+                            <li><a href="#">Registrar</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" style="margin-top:50px;">
+        <!--Ligas-->
+        <ol class="breadcrumb">
+            <li><a href="#">LibroMatico</a></li>
+            <li><a href="#">Inicio</a></li>
+            <li class="active">Buscar</li>
+        </ol>
+
+    
+        <div class="container-fluid input-busqueda">
+            <div class="input-group col-xs-12 col-md-offset-2 col-md-8">
+                <input type="text" class="form-control" aria-label="...">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default btn-negro"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+            </div>
+
+            <div class="col-xs-offset-1 col-xs-11 col-sm-offset-2 col-sm-11 col-md-offset-3 col-md-7">
+                <nav class="nav navbar-form">
+                    <div class="container-fluid nav-Buscar">
+                        <div class="navbar-header">
+                            <button type="button" class="btn btn-secundary btn-group-justified btn-sm navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="false">
+                                Filtros &nbsp;
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                            <ul class="nav navbar-nav">
+                                <li><a class="nav-item nav-link active" href="#">Todo <span class="sr-only">(current)</span></a></li>
+                                <li><a class="nav-item nav-link" href="#">Titulo</a></li>
+                                <li><a class="nav-item nav-link" href="#">Autor</a></li>
+                                <li><a class="nav-item nav-link" href="#">Propiedad</a></li>
+                                <li><a class="nav-item nav-link  btn" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Mi ubicación</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+
+            <div class="col-xs-offset-1 col-xs-10 col-sm-offset-4 col-md-offset-5 col-md-4 collapse" id="collapseExample">
+                <div class="panel">
+                    <div class="input-group">
+                        <label class="input-group-item">En un radio de &nbsp;</label>
+                        <input class="km_text input-group-item" type="text" disabled name="radio_text" id="radio_text">
+                        <label class="input-group-item">&nbsp;Km</label>
+                        <br>
+                        <br>
+                        <input type="range" name="radio_range" id="radio_range" min="1" max="200" step="1" onchange="">
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <!--Resultados de busqueda-->
+        <div class="row resultados-row">
+            <div class="col-xs-12 col-sm-6 col-md-offset-1 col-md-5">
+                <h3>Resultados de busqueda</h3>
+            </div>
+            <div class="col-xs-offset-7 col-xs-4 col-sm-offset-3  col-sm-3 col-md-offset-4 col-md-2">
+                <!--<select class="form-control">
+                    <option selected> Ordenar </option>
+                    <option> Alfabeto </option>
+                    <option> Más visitados </option>
+                </select>-->
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Ordenar
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Alfabeto</a></li>
+                        <li><a href="#">Más visitados</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!--Resultados_libros-->
+        <div class="container-fluid resultados-container">
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img12.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Alex Muñoz</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button" class="caption">
+                    <img class="img-responsive center-block imagen_item" src="/images/img9.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Sergio Flores</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img10.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Carlos Hernandez rodriguez</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/Images/img11.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Raul Ruvalcaba</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img1.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Sebastián Hells</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img2.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Carlos Hernandez</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12  col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img3.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Carlos Hernandez</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img4.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Carlos Hernandez</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img5.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Carlos Hernandez</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img6.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Carlos Hernandez</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img7.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Carlos Hernandez</a></h5>
+                </div>
+
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-2 panel panel-default">
+                <a type="button">
+                    <img class="img-responsive center-block imagen_item" src="/images/img8.jpg">
+                </a>
+                <div class="caption">
+                    <h3 class="text-center">Titulo</h3>
+                    <div class="text-center">
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star"></span>
+                        <span class="glyphicon glyphicon-star-empty"></span>
+                    </div>
+                    <h5 class="text-center">Prop: <a type="link">Carlos Hernandez</a></h5>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+        <nav class="text-center">
+            <ul class="pagination pagination-lg">
+                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li class=""><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">5 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#" aria-label="next"><span aria-hidden="true">&raquo;</span></a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+
+
+
+
+    <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Radio</h4>
+                </div>
+                <div class="modal-body">
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <p>
+                    © 2016 LibroMatico
+                </p>
+                <p>
+                    Número de usuarios: 234343
+                </p>
+                <p>
+                    Número de prestados realizados: 1345333
+                </p>
+                <p>
+
+                </p>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6">
+                <blockquote>
+                    <p>"El que lee mucho y anda mucho, ve mucho y sabe mucho."</p>
+                    <footer> Miguel de Cervantes (1547-1616) Escritor español.</footer>
+                </blockquote>
+            </div>
+            <div class="copyright col-xs-12">
+                <div class="text-center">
+                    <p>
+                        Made in Chile <span>CL</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="/js/jquery.min.js"></script>
+<!-- JS -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!--Radio-->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#radio_range').change(function () {
+            $('#radio_text').val($(this).val());
+        });
+    });
+</script>
+
+
+<!--<script>
+    $(".dropdown-menu li a").click(function () {
+        $(".btn:first-child").html($(this).text() + ' <span class="caret"></span>');
+    });
+</script>-->

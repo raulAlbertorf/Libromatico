@@ -1,0 +1,98 @@
+<project name="Database creation" default="dist" basedir=".">
+	<property name="sql.driver" 	value="com.mysql.jdbc.Driver"/>
+	<property name="sql.url" 		value="jdbc:mysql://localhost:3306/libromatico_api" />
+	<property name="sql.db" 		value="libromatico_api"/>
+	<property name="sql.user"    	value="libromatico_user"/>
+	<property name="sql.pass" 		value="123456"/>
+	<property name="sql.encode" 	value="UTF-8"/>
+	<target name="Init">
+      <input message="Do you really want to delete this Database (y/n)?" validargs="y,n" addproperty="do.delete" /> 
+      <condition property="do.abort"> 
+            <equals arg1="n" arg2="${do.delete}"/> 
+      </condition> 
+      <fail if="do.abort">Build aborted by user.</fail> 
+      <sql driver="${sql.driver}" 
+      		url="${sql.url}" 
+      		userid="${sql.user}" 
+      		password="${sql.pass}"
+      		classpath = "../Lib/mysql-connector-java/mysql-connector-java-5.1.39-bin.jar"
+			delimiter = "$$"
+			encoding = "${sql.encode}">
+		   SET FOREIGN_KEY_CHECKS=0;$$
+           DROP TABLE IF EXISTS ${sql.db}.`comentario`;$$
+           DROP TABLE IF EXISTS ${sql.db}.`autor_item`;$$
+           DROP TABLE IF EXISTS ${sql.db}.`propiedad`;$$
+           DROP TABLE IF EXISTS ${sql.db}.`autor`;$$
+           DROP TABLE IF EXISTS ${sql.db}.`prestamo`;$$
+           DROP TABLE IF EXISTS ${sql.db}.`ubicacion`;$$
+           DROP TABLE IF EXISTS ${sql.db}.`item`;$$
+           DROP TABLE IF EXISTS ${sql.db}.`perfil`;$$
+           DROP TABLE IF EXISTS ${sql.db}.`cuenta`;$$
+           SET FOREIGN_KEY_CHECKS=1;$$
+      </sql>
+   </target>
+
+	<target name="CreateTables"> 
+		<sql 
+			driver="${sql.driver}" 
+			url="${sql.url}" 
+			userid="${sql.user}" 
+			password="${sql.pass}" 
+			autocommit="true"
+			classpath = "../Lib/mysql-connector-java/mysql-connector-java-5.1.39-bin.jar"
+			delimiter = "$$"
+			encoding = "${sql.encode}"> 
+			<path>
+				<fileset dir=".">
+					<include name= "00*.sql"/>
+				</fileset>
+			</path>
+			 
+		</sql> 
+	</target> 
+
+	<target name="CreateStores"> 
+		<sql 
+			driver="${sql.driver}" 
+			url="${sql.url}" 
+			userid="${sql.user}" 
+			password="${sql.pass}" 
+			autocommit="true"
+			classpath = "../Lib/mysql-connector-java/mysql-connector-java-5.1.39-bin.jar"
+			delimiter = "$$"
+			encoding = "${sql.encode}"> 
+			<path>
+				<fileset dir=".">
+					<include name= "4*.sql"/>
+				</fileset>
+			</path>
+			 
+		</sql> 
+	</target> 
+
+	<target name="InsertData"> 
+		<sql 
+			driver="${sql.driver}" 
+			url="${sql.url}" 
+			userid="${sql.user}" 
+			password="${sql.pass}" 
+			autocommit="true"
+			classpath = "../Lib/mysql-connector-java/mysql-connector-java-5.1.39-bin.jar"
+			delimiter = "$$"
+			encoding = "${sql.encode}"> 
+			<path>
+				<fileset dir=".">
+					<include name= "9*.sql"/>
+				</fileset>
+			</path>
+			 
+		</sql> 
+	</target>
+
+	<target name ="CreateDataBase">
+		<antcall target = "CreateTables"/>
+		<antcall target = "CreateStores"/>
+		<antcall target = "InsertData"/>
+	</target>
+
+</project>

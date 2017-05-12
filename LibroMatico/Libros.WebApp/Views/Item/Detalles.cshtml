@@ -1,0 +1,468 @@
+﻿@model Libros.Models.Item
+
+@{
+    ViewBag.Title = "Item";
+    Layout = "~/Views/_Layout.cshtml";
+    var Cuenta_Activa = Libros.WebApp.Utils.SessionManager.CuentaActiva();
+    var Item_Perfil_Activo = @Model.Propietario.Id;
+    var Perfil_Activo = Libros.WebApp.Utils.SessionManager.PerfilActivo();
+    if (Perfil_Activo != null)
+        if (Perfil_Activo.Id != Item_Perfil_Activo)
+            Model.Visitado();
+    if (Perfil_Activo == null)
+        Model.Visitado();
+}
+@section Styles{
+    <link rel="stylesheet" href="~/Contents/css/imagen.css">
+    <link rel="stylesheet" href="~/Contents/css/modificarImagen.css">
+    <link rel="stylesheet" href="~/Contents/css/circleButton.css">
+    <link rel="stylesheet" href="~/Contents/css/dotText.css">
+    <link rel="stylesheet" href="~/Contents/css/item.css">
+}
+@section Scripts{
+    <script src="~/Contents/js/imagen.js"></script>
+}
+<div class="container">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+        <li class="active">@Html.ActionLink("Busqueda", "Busqueda", "Home")</li>
+    </ol>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="thumbnail">
+            @{
+                if (Cuenta_Activa != null && Perfil_Activo.Id == Item_Perfil_Activo)
+                {
+
+                    <div class="img-wrapper showhim">
+                        <img class="img-responsive center-block" src="@Url.Content("~/Contents/img/" + @Model.UrlImagen)" style="max-width:230px; max-height:300px">
+                        <div class="img-overlay showme">
+                            <a class="btn btn-success btn-circle btn-xl" data-toggle="modal" data-target="#Imagen">
+                                <i class="glyphicon glyphicon-pencil"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="caption text-center">
+                        <div class="dropdown">
+                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <i class="fa fa-cog" aria-hidden="true"></i> 
+                                Acciones
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <a href="#" data-toggle="modal" data-target="#Modificar">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        Modificar
+                                    </a>
+                                </li>
+                                    <li>
+                                        <a href="#" data-toggle="modal" data-target="#Eliminar">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                            Eliminar item
+                                        </a>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <img class="img-responsive" src="@Url.Content("~/Contents/img/" + @Model.UrlImagen)" style="max-width:300px; max-height:300px">
+                }
+
+            }
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-6">
+        <div class="panel panel-default ">
+            <div class="panel-heading">
+                <h4 class="">@Model.Titulo</h4>
+            </div>
+
+            <div class="panel-body">
+                <p class="text-justify dot-text" title="@Model.Resumen">
+                    @Model.Resumen
+                </p>
+
+                @{
+                    if (@Model.Autores().Count > 1)
+                    {
+                        <strong> Autores: </strong>
+                    }
+                    else
+                    {
+                        if (@Model.Autores().Count != 0 && @Model.Autores().Count == 1)
+                        {
+                            <strong> Autor</strong>
+                        }
+                    }
+                    <div class="col-xs-offset-1">
+                        <p>
+                            @foreach (var autor in @Model.Autores())
+                            {
+                                <h5>
+                                    @autor.Nombre
+                                    @if (Cuenta_Activa != null && Perfil_Activo.Id == Item_Perfil_Activo)
+                                    {
+                                        <a type="button" class="btn-xs" href="@Url.Action("Eliminar", "Autor", new { Id_Item = @Model.Id, Id_autor = @autor.Id })" onclick="console.log(this)"><span class="glyphicon glyphicon-remove fa-pull-right"></span></a>
+                                    }
+                                </h5>
+                            }
+                        </p>
+                    </div>
+                }
+
+                <div class="collapse" id="collapseAutor">
+                    @using (Html.BeginForm("AgregarExistente", "Autor", new { Id_Autor = @Model.Autores(), Id_Item = @Model.Id }, FormMethod.Post))
+                    {
+                        <fieldset>
+                            <div class="form-group">
+                                <label for="Titulo" class="control-label col-xs-12">Nombre</label>
+                                <div class="col-xs-12">
+                                    @Html.DropDownListFor(x => x.Id, new SelectList(new Libros.Models.Autor().Buscar_Autores(""), "Id", "Nombre"), new { @class = "form-control" })
+
+                                    <br />
+                                </div>
+                                <div class="col-xs-6">
+                                    <a class="btn btn-danger btn-xs" data-toggle="collapse" href="#collapseAutorNuevo" aria-expanded="false" aria-controls="collapseAutorNuevo" role="button"><span class="glyphicon glyphicon-chevron-down"></span>&nbsp;&nbsp;Agregar Nuevo</a>
+                                </div>
+                                <div class="col-xs-6">
+                                    <button type="submit" class="btn btn-warning btn-xs pull-right"><i class="fa fa-user-plus" aria-hidden="true"></i> Agregar</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    }
+                    <br />
+                    <br />
+                    @using (Html.BeginForm("Agregar", "Autor", new { Id_Item = @Model.Id }, FormMethod.Post))
+                    {
+                        <fieldset>
+                            <div class="row collapse" id="collapseAutorNuevo">
+                                <div class="form-group">
+                                    <label for="Titulo" class="control-label col-xs-3">Nombre:</label>
+                                    <div class="col-xs-9">
+                                        @Html.TextBox("Nombre", null, new { @class = "form-control", @maxlength = "20" })
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <div class="col-xs-12">
+                                        <br />
+                                        <button type="submit" class="btn btn-warning btn-xs pull-right"><i class="fa fa-user-plus" aria-hidden="true"></i> Agregar nuevo</button>
+                                        <br />
+                                        <br />
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    }
+                </div>
+
+                @if (Cuenta_Activa != null && Perfil_Activo.Id == Item_Perfil_Activo)
+                {
+                    <a type="submit" class="btn btn-success btn-xs" data-toggle="collapse" href="#collapseAutor" aria-expanded="false" aria-controls="collapseAutor" role="button"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp;Agregar Autor</a>
+                    <br />
+                    <br />
+                }
+
+            </div>
+
+            <div class="panel-footer">
+
+                <p>
+                    @if (@Model.Propiedades().Count > 1)
+                    {
+                        <strong>Propiedades: </strong>
+                    }
+                    else
+                    {
+                        if (@Model.Propiedades().Count != 0 && @Model.Propiedades().Count == 1)
+                        {
+                            <strong> Propiedad</strong>
+                        }
+                    }
+                </p>
+                <div class="col-xs-offset-1">
+                    @foreach (var propiedad in @Model.Propiedades())
+                    {
+                        <p>
+                            <strong>@propiedad.Key : </strong>@propiedad.Value
+                            @if (Cuenta_Activa != null && Perfil_Activo.Id == Item_Perfil_Activo)
+                            {
+                                <a type="button" class="btn-xs" href="@Url.Action("Eliminar", "Propiedades", new { key = @propiedad.Key, Id = @Model.Id })"><span class="glyphicon glyphicon-remove fa-pull-right"></span></a>
+                            }
+                        </p>
+                    }
+                </div>
+
+                <div class="container-fluid collapse" id="collapsePropiedades">
+                    @using (Html.BeginForm("Agregar", "Propiedades", new { Id_Item = @Model.Id }, FormMethod.Post))
+                    {
+                        <fieldset>
+                            <p><strong>Agregar Propiedad</strong></p>
+                            <div class="form-group">
+                                <label for="Titulo" class="control-label col-xs-4">Nombre:</label>
+                                <div class="col-xs-8">
+                                    @Html.TextBox("Key", null, new { @class = "form-control", @maxlength = "15", placeholder = "ej: año, versión, ISBN, tomo, etc." })
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+                            <div class="form-group">
+                                <label for="Titulo" class="control-label col-xs-4">Valor:</label>
+                                <div class="col-xs-8">
+                                    @Html.TextBox("Value", null, new { @class = "form-control", @maxlength = "20", placeholder = "ej: 1991, rojo, tapa dura, etc." })
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <br />
+                                <input type="submit" value="Agregar" class="btn btn-warning pull-right" />
+                            </div>
+                        </fieldset>
+                    }
+
+                </div>
+                @if (Cuenta_Activa != null && Perfil_Activo.Id == Item_Perfil_Activo)
+                {
+                    <br />
+                    <a class="btn btn-success btn-xs" data-toggle="collapse" href="#collapsePropiedades" aria-expanded="false" aria-controls="collapsePropiedades" role="button"><span class="glyphicon glyphicon-plus"></span>&nbsp;&nbsp; Agregar Propiedad</a>
+                    <br />
+                    <br />
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Información</h3>
+            </div>
+            <div class="panel-body">
+                <p class="text-justify">
+                    <strong>Veces visto:</strong>&nbsp;&nbsp;@Model.VecesVisto
+                </p>
+            </div>
+        </div>
+
+        <div class="panel panel-default ">
+            <div class="panel-heading">
+                <h3 class="panel-title">Propietario</h3>
+            </div>
+            <div class="panel-body">
+
+                <p>
+                    <strong>Nombre:</strong>
+
+                    <a href="@Url.Action("Detalles", "Perfil", new { Id = Model.Propietario.Id })">@Model.Propietario.Nombre</a>
+
+
+                </p>
+                <p><strong>Nacionalidad:</strong> @Model.Propietario.Nacionalidad</p>
+                <p>
+                    <strong>Valoración:</strong> @Model.Propietario.ReputacionPrestamista()
+
+                </p>
+            </div>
+        </div>
+        @{
+
+            @*var prestado = Model.Propietario.HistorialPrestamista().Any(p => p.Item.Id == Model.Id);
+                if (Cuenta_Activa != null && Perfil_Activo != null && Perfil_Activo.Id == Model.Propietario.Id && !prestado)
+                {
+                    <div class="text-center">
+                        <a href="#" class="btn btn-danger btn-md" data-toggle="modal" data-target="#Eliminar" role="button">
+                            <span class="glyphicon glyphicon-remove"></span>
+                            Eliminar item
+                        </a>
+                    </div>
+                }*@
+
+            @*if (Perfil_Activo != null && Perfil_Activo.Id != Item_Perfil_Activo && !Model.estaSolicitado(Perfil_Activo.Id) && !Perfil_Activo.Cuenta.Email.Equals(Model.Propietario.Cuenta.Email))
+                {
+                    var misSolicitudes = Perfil_Activo.HistorialReceptor().Any(p => p.Item.Id == Model.Id);
+                    if (!misSolicitudes)
+                    {
+                        <div class="text-center">
+                            <a type="submit" href="" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#Solicitud" role="button">Solicitar</a>
+                        </div>
+                    }
+
+
+                }
+                else if (Model.estaSolicitado(Perfil_Activo.Id) && Perfil_Activo.Id != Item_Perfil_Activo && !Perfil_Activo.Cuenta.Email.Equals(Model.Propietario.Cuenta.Email))
+                {
+                    <div class="text-center">
+                        <a type="submit" href="@Url.Action("Detalles", "Prestamo" , new { Id=Model.Prestamo_Id_Item(Perfil_Activo.Id)})" class="btn btn-warning btn-lg" role="button">Ver préstamo</a>
+                    </div>
+                }*@
+
+        if (Perfil_Activo != null && Perfil_Activo.Id != Item_Perfil_Activo)
+        {
+            var prestadoCancelado = Perfil_Activo.HistorialReceptor().Any(p => p.Item.Id == Model.Id && p.Estado != Libros.Models.EstadoPrestamo.Cancelado);
+            if (!prestadoCancelado && !Perfil_Activo.Cuenta.Email.Equals(Model.Propietario.Cuenta.Email))
+            {
+                <div class="text-center">
+                    <a type="submit" href="" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#Solicitud" role="button"><i class="fa fa-hand-pointer-o" aria-hidden="true"></i> Solicitar</a>
+                </div>
+            }
+            if (prestadoCancelado)
+            {
+                <div class="text-center">
+                    <a type="submit" href="@Url.Action("Detalles", "Prestamo", new { Id = Model.Prestamo_Id_Item(Perfil_Activo.Id) })" class="btn btn-warning btn-lg" role="button">Ver préstamo</a>
+                </div>
+                }
+            }
+        }
+</div>
+
+</div>
+
+<!-- Modal -->
+            <div id="Modificar" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    @using (Html.BeginForm("Modificar", "Item", FormMethod.Post))
+                    {
+                        <fieldset>
+                            @Html.HiddenFor(Model => Model.Id)
+                            @Html.HiddenFor(Model => Model.Propietario.Nacionalidad)
+                            @Html.HiddenFor(Model => Model.Propietario.Id)
+                            @Html.HiddenFor(Model => Model.Propietario.Nombre)
+                            @Html.HiddenFor(Model => Model.Propietario.UrlImagen)
+                            @Html.HiddenFor(Model => Model.Propietario.Nacionalidad)
+                            @*@Html.HiddenFor(Model => Model.Propietario.Ubicacion)*@
+                            @*@Html.HiddenFor(Model => Model.Propietario.Cuenta)*@
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title text-center">Modificar Item</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal">
+                                        <div class="container-fluid">
+                                            <div class="form-group">
+                                                <label for="Titulo" class="control-label col-xs-3">Titulo</label>
+                                                <div class="col-xs-9">
+                                                    @Html.TextBoxFor(model => model.Titulo, new { @class = "form-control", @maxlength = "50" })
+                                                </div>
+                                            </div>
+                                            <br />
+                                            <div class="form-group">
+                                                <label for="Resumen" class="control-label col-xs-3">Resumen</label>
+                                                <div class="col-xs-9">
+                                                    @Html.TextAreaFor(model => model.Resumen, new { @class = "form-control textarea", maxlength = "255" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="submit" value="Modificar" class="btn btn-success" />
+                                    <button type="reset" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    }
+                </div>
+            </div>
+
+
+            <div id="Solicitud" class="modal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">¿Está seguro que desea enviar esta solicitud?</h4>
+                        </div>
+                        @using (Html.BeginForm("Crear", "Prestamo", FormMethod.Post))
+            {
+                            <fieldset>
+                                @Html.Hidden("Item_Id", Model.Id)
+                                @Html.Hidden("Prestamista_Id", Model.Propietario.Id)
+                                @Html.Hidden("Receptor_Id", Perfil_Activo.Id)
+                                <div class="modal-footer">
+                                    <input class="btn btn-primary" value="Solicitar" type="submit" />
+                                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </fieldset>
+                        }
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div id="Eliminar" class="modal" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">¿Está seguro que desea eliminar este item?</h4>
+                        </div>
+                        @using (Html.BeginForm("Eliminar", "Item", FormMethod.Post))
+            {
+                            <fieldset>
+                                @Html.Hidden("Perfil_Id", Model.Propietario.Id)
+                                @Html.Hidden("Item_Id", Model.Id)
+                                <div class="modal-footer">
+                                    <input class="btn btn-danger" value="Eliminar" type="submit" />
+                                    <button type="reset" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </fieldset>
+                        }
+                    </div>
+                </div>
+            </div>
+
+            <div id="Imagen" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    @using (Html.BeginForm("CargarImagen", "Item", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                    {
+                        <fieldset>
+                            @Html.HiddenFor(Model => Model.Id)
+                            @Html.HiddenFor(Model => Model.Propietario.Nacionalidad)
+                            @Html.HiddenFor(Model => Model.Propietario.Id)
+                            @Html.HiddenFor(Model => Model.Propietario.Nombre)
+                            @Html.HiddenFor(Model => Model.Propietario.UrlImagen)
+                            @Html.HiddenFor(Model => Model.Propietario.Nacionalidad)
+                            @*@Html.HiddenFor(Model => Model.Propietario.Ubicacion)
+                                @Html.HiddenFor(Model => Model.Propietario.Cuenta)*@
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h3 class="modal-title text-center">Modificar Imagen</h3>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal">
+                                        <div class="container-fluid">
+                                            <label for="photo" class="col-xs-2">Imagen:</label>
+                                            <div class="input-group  col-xs-10">
+                                                @*<label class="input-group-btn">
+                                                        Abrir...
+                                                        <input type="file" multiple="" id="photo" name="photo">
+                                                    </label>*@
+                                                <input type="text" class="form-control input-sm filefield" placeholder="Url..." readonly="">
+                                                <span class="input-group-btn">
+                                                    <label class="btn btn-warning btn-sm btn-file">
+                                                        <span class="glyphicon glyphicon-camera"></span> Abrir
+                                                        <input type="file" style="display: none;" id="photo" name="photo">
+                                                    </label>
+                                                </span>
+                                            </div>
+                                            <br />
+                                            <br />
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="submit" value="Modificar" class="btn btn-success" />
+                                    <button type="reset" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                                </div>
+                            </div>
+                        </fieldset>
+                    }
+                </div>
+            </div>

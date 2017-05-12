@@ -1,0 +1,82 @@
+﻿@model Libros.Models.Estanteria
+
+@{
+    ViewBag.Title = "MasVistos";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+@section Styles{
+    <!-- Important Owl stylesheet -->
+    <link rel="stylesheet" href="~/Contents/js/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="~/Contents/js/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="~/Contents/css/dotText.css">
+}
+
+@section Scripts{
+    <!-- Owl carousel -->
+    <script src="~/Contents/js/owl-carousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            var ultimos = $("#owl-losmasvistos");
+            ultimos.owlCarousel({
+                items: 5,
+            });
+        });
+        $(document).ready(function () {
+
+            var generosos = $("#owl-losmasgenerosos");
+            generosos.owlCarousel({
+                items: 5,
+            });
+        });
+    </script>
+}
+
+<div class="container">
+    <div class="row">
+        <!--Los Mas Vistos-->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title pull-left" style="padding-top: 7.5px;"><i class="fa fa-eye" aria-hidden="true"></i> Los Más Vistos</h4>
+                </div>
+                <div class="panel-body">
+                    <div id="owl-losmasvistos" class="owl-carousel owl-theme">
+                        @{
+                            var vts = Model.LosMasVistos( 10 );
+                            foreach ( var item in vts )
+                            {
+                                <a href="@Url.Action("Detalles", "Item", new { id = item.Id })">
+                                    <img src="~/Contents/img/@item.UrlImagen" class="img-responsive" style="width:160px; height:200px;">
+                                </a>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Mejor Prestamista-->
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading clearfix">
+                    <h4 class="panel-title pull-left" style="padding-top: 7.5px;"><i class="fa fa-users" aria-hidden="true"></i> Mejores Prestamistas</h4>
+                </div>
+                <div class="panel-body">
+                    <div id="owl-losmasgenerosos" class="owl-carousel owl-theme">
+                        @{
+                            var ult = Model.LosMasGenerosos( 10 );
+                            foreach ( var perfil in ult )
+                            {
+                                <a href="@Url.Action("Detalles", "Perfil", new { id = perfil.Id })">
+                                    <img src="~/Contents/img/@perfil.UrlImagen" align="middle" class="img-responsive" style="width:160px; height:200px;">
+                                </a>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

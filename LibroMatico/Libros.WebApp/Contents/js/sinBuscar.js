@@ -1,0 +1,1 @@
+﻿$(".navbar-search").hide();

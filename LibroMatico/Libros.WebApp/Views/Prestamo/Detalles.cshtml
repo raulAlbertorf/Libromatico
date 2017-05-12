@@ -1,0 +1,479 @@
+﻿@model Libros.Models.Prestamo
+
+@{
+    ViewBag.Title = "Detalles Prestamo";
+    Layout = "~/Views/_Layout.cshtml";
+    var Perfil_Activo = Libros.WebApp.Utils.SessionManager.PerfilActivo();
+}
+@section Styles {
+    <!-- CSS para los  comentarios -->
+    <link href="@Url.Content( "~/Contents/css/post.css" )" rel="stylesheet">
+
+    <!-- CSS para los el estado de prestamo -->
+    <link href="@Url.Content( "~/Contents/css/timeline.css" )" rel="stylesheet">
+
+    <!-- CSS para prestamo -->
+    <link href="@Url.Content( "~/Contents/css/prestamo.css" )" rel="stylesheet">
+
+    <!-- CSS para Stars Rating -->
+    <link href="@Url.Content( "~/Contents/css/stars.css" )" rel="stylesheet">
+    <link rel="stylesheet" href="~/Contents/css/dotText.css">
+
+}
+
+@section Scripts{
+    <script src="@Url.Content("~/Contents/js/propiedades.js")"></script>
+
+    <script>
+        function valorarPropietario(valoracion) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("CalificarPrestamista", "Prestamo")",
+                dataType: 'json',
+                quietMillis: 250,
+                data: { "Prestamo_Id": @Model.Id, "valoracion": valoracion},
+                success: function (data)
+                {},
+                cache: true
+            });
+        };
+    </script>
+    <script>
+        function valorarSolicitante(valoracion) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("CalificarSolicitante", "Prestamo")",
+                dataType: 'json',
+                quietMillis: 250,
+                data: { "Prestamo_Id": @Model.Id, "valoracion": valoracion},
+                success: function (data)
+                {},
+                cache: true
+            });
+        };
+    </script>
+    <script>
+        function estadoSiguiente(estado) {
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Editar", "Prestamo")",
+                dataType: 'json',
+                quietMillis: 250,
+                data: { "Id": @Model.Id, "estado": estado},
+                success: function (data)
+                {
+                },
+                cache: true
+            });
+            location.reload();
+        }
+    </script>
+
+    <script type="text/javascript">
+
+        var valorP = @Model.CalificacionAlPrestamista;
+
+        for (var j=1; j<=valorP; j++)
+        {
+            $("#rating-input-p-"+j).prop('checked', true);
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        var valorR = @Model.CalificacionAlReceptor;
+
+        for (var i=1; i<=valorR; i++)
+        {
+            $("#rating-input-r-"+i).prop('checked', true);
+        }
+
+ 
+    </script>
+
+}
+
+
+<div class="container">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+        <li>@Html.ActionLink("Mis Prestamos", "MisPrestamos", new { Id = Perfil_Activo.Id })</li>
+        <li class="active">@Html.ActionLink("Detalles", "Detalles", new { id = Model.Id })</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-10 col-md-9">
+            <h2>Detalles</h2>
+        </div>
+        @{
+            if (Perfil_Activo != null && Perfil_Activo.Id == Model.Receptor.Id && Model.Estado != Libros.Models.EstadoPrestamo.Entregado && Model.Estado != Libros.Models.EstadoPrestamo.EnTransito && Model.Estado != Libros.Models.EstadoPrestamo.Cancelado)
+            {
+
+                <div class="col-lg-2 col-md-3">
+                    <div style="margin-top: 20px;">
+                        @using (Html.BeginForm("Editar", "Prestamo", new { Id = Model.Id, Estado = Libros.Models.EstadoPrestamo.Cancelado }, FormMethod.Post))
+                {
+                            <button type="submit" class="btn btn-danger"><i class="fa fa-times-circle"></i>&nbsp;&nbsp;Cancelar</button>
+                        }
+                    </div>
+                </div>
+            }
+            if (Perfil_Activo != null && Perfil_Activo.Id == Model.Prestamista.Id && Model.Estado != Libros.Models.EstadoPrestamo.Entregado && Model.Estado != Libros.Models.EstadoPrestamo.Cancelado)
+            {
+                <div class="col-lg-2 col-md-3">
+                    <div style="margin-top: 20px;">
+                        <div class="dropdown">
+                            <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                Acciones
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li>
+                                    <a onclick="estadoSiguiente(@Convert.ToInt16(Enum.Parse(typeof(Libros.Models.EstadoPrestamo),(Model.Estado+1).ToString())) );">
+                                        <i class="fa fa-step-forward"></i>
+                                        Avanzar estado
+                                    </a>
+                                </li>
+                                @if (Model.Estado != Libros.Models.EstadoPrestamo.EnTransito)
+                                {
+                                    <li>
+                                        <a onclick="estadoSiguiente(@Convert.ToInt16(Libros.Models.EstadoPrestamo.Cancelado));">
+                                            <i class="fa fa-times-circle"></i>&nbsp;&nbsp;
+                                            Cancelar
+                                        </a>
+                                    </li>
+                                }
+                            </ul>
+                        </div>
+                        @*@using (Html.BeginForm("Editar", "Prestamo", new { Id = Model.Id, estado = Enum.Parse(typeof(Libros.Models.EstadoPrestamo), (Model.Estado + 1).ToString()) }, FormMethod.Post))
+                            {
+                            <button type="submit" class="btn btn-warning" href="" role="button"> <i class="fa fa-edit"></i> @Enum.Parse(typeof(Libros.Models.EstadoPrestamo), (Model.Estado + 1).ToString())</button>
+                            }*@
+
+                    </div>
+                </div>
+            }
+        }
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+                <!-- Estado de prestamo -->
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title">Estado Prestamo</h2>
+                        </div>
+                        <!--<div class="panel-body">
+                        <div class="panel panel-default">-->
+                        <div class="board">
+                            <div class="board-inner">
+                                @{
+                                    Html.RenderPartial(Url.Content("~/Views/Prestamo/_EstadoPrestamo.cshtml"), Model);
+                                }
+                            </div>
+                            <div class="tab-content">
+                                <div class="row">
+                                    <div class="col-lg-10 col-md-9">
+                                        <p style="margin-bottom:20px;"><strong>Estado de Prestamo </strong> <span class="label label-info">@Model.Estado</span></p>
+                                        <div id="estado" class="collapse">
+                                            @{
+                                                if (Model.Estado >= Libros.Models.EstadoPrestamo.Aceptado)
+                                                {
+                                                    <p><strong>Fecha de Envío </strong> @Model.FechaEnvio</p>
+                                                }
+                                                if (Model.Estado >= Libros.Models.EstadoPrestamo.Entregado)
+                                                {
+                                                    <p><strong>Fecha de Recepción </strong> @Model.FechaRecepcion</p>
+                                                }
+
+                                            }
+                                            <p><strong>Fecha de Expiración </strong> @Model.FechaExpiracion</p>
+                                            <p><strong>Fecha Última Modificación </strong> @Model.FechaUltimaModificacion</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-3">
+                                        <div>
+                                            <a class="btn btn-xs" data-toggle="collapse" data-target="#estado"><i class="fa fa-angle-down"></i> Ver Mas</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <!--</div>
+                        </div>-->
+                    </div>
+                </div>
+                <!--Comentarios-->
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-white post">
+                        <div class="post-description">
+                            @using (Html.BeginForm("AgregarComentario", "Prestamo", FormMethod.Post))
+                            {
+                                <div class="input-group">
+                                    @Html.Hidden("Prestamo_id", Model.Id)
+                                    @Html.TextBox("Texto", null, new { @class = "form-control", @placeholder = "Agregar comentario", @maxlength = "250", pattern = "[a-zA-Z0-9.,-*¡?¿!;@#+-_$%&/()°|]" })
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default " type="submit"><i class="fa fa-edit"></i></button>
+                                    </span>
+                                </div>
+                            }
+                        </div>
+                        <div class="post-footer">
+                            <ul class="comments-list">
+                                @foreach (var comentario in Model.Comentarios())
+                                {
+                                    <li class="comment">
+                                        <a class="pull-left image" href="">
+                                            @if (!String.IsNullOrEmpty(comentario.Perfil.UrlImagen))
+                                            {
+                                                <img class="img-circle avatar" src="@Url.Content( "~/Contents/img/" + comentario.Perfil.UrlImagen )" alt="avatar">
+                                            }
+                                            else
+                                            {
+                                                <img class="img-circle avatar" src="@Url.Content( "~/Contents/img/unknown-user.png" )" alt="avatar">
+                                            }
+                                        </a>
+                                        <div class="comment-body">
+                                            <div class="comment-heading">
+                                                <h4 class="user">@comentario.Perfil.Nombre</h4>
+                                                <h5 class="time">@Libros.WebApp.Utils.TimeAgo.timeNow(comentario.FechaCreacion)</h5>
+                                                @{
+                                                    if (Perfil_Activo != null && Perfil_Activo.Id == comentario.Perfil.Id)
+                                                    {
+                                                        <a href="@Url.Action( "EliminarComentario" , "Prestamo" , new { id = comentario.Id , prestamo = Model.Id } )">
+                                                            <i class="fa fa-times pull-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    }
+                                                }
+
+                                            </div>
+                                            <p>@comentario.Texto</p>
+                                        </div>
+                                    </li>
+                                                    }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row">
+                <!--Detalle Prestamo -->
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="panel panel-default">
+                        <ul class="nav nav-pills">
+                            <li class="active">
+                                <a href="#1a" data-toggle="tab">Detalle Prestamo</a>
+                            </li>
+                            <li>
+                                <a href="#2a" data-toggle="tab">Detalle Propietario</a>
+                            </li>
+                            <li>
+                                <a href="#3a" data-toggle="tab">Detalle Solicitante</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content clearfix">
+                            <div class="tab-pane active" id="1a">
+                                <div class="col-xs-7 col-sm-4 col-md-5">
+                                    <div class="thumbnail">
+                                        @if (!String.IsNullOrEmpty(Model.Item.UrlImagen))
+                                        {
+                                            <a href="@Url.Action("Detalles", "item", new { Id = Model.Item.Id})"><img alt="item_image" src="@Url.Content( "~/Contents/img/" + Model.Item.UrlImagen )"></a>
+                                        }
+                                        else
+                                        {
+                                            <img alt="item_image" src="@Url.Content( "~/Contents/img/notPicture.jpg" )">
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <p><strong>Titulo:</strong> @Model.Item.Titulo</p>
+                                    <p>
+                                        <strong>Autor:</strong>
+                                        @foreach (var a in @Model.Item.Autores())
+                                        {
+                                            <label>@Html.ActionLink(a.Nombre, "Detalles", "Autor", new { id = a.Id }, null) </label>
+                                        }
+                                    </p>
+                                    @{ var propiedades = @Model.Item.Propiedades(); }
+                                    @foreach (var b in propiedades.Keys)
+                                    {
+                                        <p><strong>@b : </strong> @propiedades[b]</p>
+                                    }
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="2a">
+                                <div class="col-xs-7 col-sm-4 col-md-5">
+                                    <div class="thumbnail">
+                                        @if (!String.IsNullOrEmpty(Model.Prestamista.UrlImagen))
+                                        {
+                                            <img alt="item_image" src="@Url.Content( "~/Contents/img/" + Model.Prestamista.UrlImagen )">
+                                        }
+                                        else
+                                        {
+                                            <img alt="item_image" src="@Url.Content( "~/Contents/img/unknown-user.png" )">
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <p><strong>Nombre:</strong> @Html.ActionLink(@Model.Prestamista.Nombre, "Detalles", "Perfil", new { id = @Model.Prestamista.Id }, null)</p>
+                                    <p><strong>Nacionalidad:</strong> Chile</p>
+                                    <p>
+                                        <strong>Valoración:</strong>
+
+                                        @{
+                                            if (Perfil_Activo != null && Model.Receptor.Id == Perfil_Activo.Id && !(Model.CalificacionAlPrestamista > 0))
+                                            {
+                                                <span class="rating">
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-5" name="rating-input-1" onclick="valorarPropietario(5);" hidden>
+                                                    <label for="rating-input-p-5" class="rating-star"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-4" name="rating-input-1" onclick="valorarPropietario(4);" hidden>
+                                                    <label for="rating-input-p-4" class="rating-star"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-3" name="rating-input-1" onclick="valorarPropietario(3);" hidden>
+                                                    <label for="rating-input-p-3" class="rating-star"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-2" name="rating-input-1" onclick="valorarPropietario(2);" hidden>
+                                                    <label for="rating-input-p-2" class="rating-star"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-1" name="rating-input-1" onclick="valorarPropietario(1);" hidden>
+                                                    <label for="rating-input-p-1" class="rating-star"></label>
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span class="rating">
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-5" name="rating-input-2" hidden>
+                                                    <label for="rating-input-p-5" class="rating-star disabled"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-4" name="rating-input-2" hidden>
+                                                    <label for="rating-input-p-4" class="rating-star disabled"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-3" name="rating-input-2" hidden>
+                                                    <label for="rating-input-p-3" class="rating-star disabled"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-2" name="rating-input-2" hidden>
+                                                    <label for="rating-input-p-2" class="rating-star disabled"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-p-1" name="rating-input-2" hidden>
+                                                    <label for="rating-input-p-1" class="rating-star disabled"></label>
+                                                </span>
+                                            }
+                                        }
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="3a">
+                                <div class="col-xs-7 col-sm-4 col-md-5">
+                                    <div class="thumbnail">
+                                        @if (!String.IsNullOrEmpty(Model.Receptor.UrlImagen))
+                                        {
+                                            <img alt="item_image" src="@Url.Content( "~/Contents/img/" + Model.Receptor.UrlImagen )">
+                                        }
+                                        else
+                                        {
+                                            <img alt="item_image" src="@Url.Content( "~/Contents/img/unknown-user.png" )">
+                                        }
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-6">
+                                    <p class="dot-text"><strong>Nombre:</strong> @Html.ActionLink(@Model.Receptor.Nombre, "Detalles", "Perfil", new { id = @Model.Receptor.Id }, null)</p>
+                                    <p><strong>Nacionalidad:</strong> Chile</p>
+                                    <p>
+                                        <strong>Valoración:</strong>
+
+
+                                        @{
+                                            if (Perfil_Activo != null && Model.Prestamista.Id == Perfil_Activo.Id && !(Model.CalificacionAlReceptor > 0))
+                                            {
+                                                <span class="rating">
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-5" name="rating-input-4" onclick="valorarSolicitante(5);" hidden>
+                                                    <label for="rating-input-r-5" class="rating-star"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-4" name="rating-input-4" onclick="valorarSolicitante(4);" hidden>
+                                                    <label for="rating-input-r-4" class="rating-star"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-3" name="rating-input-4" onclick="valorarSolicitante(3);" hidden>
+                                                    <label for="rating-input-r-3" class="rating-star"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-2" name="rating-input-4" onclick="valorarSolicitante(2);" hidden>
+                                                    <label for="rating-input-r-2" class="rating-star"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-1" name="rating-input-4" onclick="valorarSolicitante(1);" hidden>
+                                                    <label for="rating-input-r-1" class="rating-star"></label>
+                                                </span>
+                                            }
+                                            else
+                                            {
+                                                <span class="rating">
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-5" name="rating-input-3" hidden>
+                                                    <label for="rating-input-r-5" class="rating-star disabled"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-4" name="rating-input-3" hidden>
+                                                    <label for="rating-input-r-4" class="rating-star disabled"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-3" name="rating-input-3" hidden>
+                                                    <label for="rating-input-r-3" class="rating-star disabled"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-2" name="rating-input-3" hidden>
+                                                    <label for="rating-input-r-2" class="rating-star disabled"></label>
+                                                    <input type="radio" class="rating-input"
+                                                           id="rating-input-r-1" name="rating-input-3" hidden>
+                                                    <label for="rating-input-r-1" class="rating-star disabled"></label>
+                                                </span>
+                                            }
+                                        }
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="Modificar" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title text-center">Modificar Prestamo</h3>
+            </div>
+            @using (Html.BeginForm("Editar", "Prestamo", FormMethod.Post))
+            {
+                <fieldset>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="inEstadoPrestamo" class="control-label col-xs-3">Estado Prestamo</label>
+                            <div class="col-xs-9">
+                                @Html.Hidden("Id", Model.Id)
+                                @Html.DropDownList("Estado", new SelectList(Enum.GetValues(typeof(Libros.Models.EstadoPrestamo))), new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <br />
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" class="btn btn-success" value="Modificar" />
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </fieldset>
+            }
+        </div>
+    </div>
+</div>

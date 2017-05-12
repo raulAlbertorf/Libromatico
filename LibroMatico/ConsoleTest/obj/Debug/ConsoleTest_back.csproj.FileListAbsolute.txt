@@ -1,0 +1,3 @@
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\ConsoleTest\bin\Debug\ConsoleTest.exe.config
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\ConsoleTest\obj\Debug\ConsoleTest.exe
+C:\Users\RF RAUL\Documents\Chile\Construcción y validación\Proyecto\trunk\LibroMatico\ConsoleTest\obj\Debug\ConsoleTest.pdb

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewBag.Title</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <!-- font-awesome -->
+    <link href="~/Contents/css/font-awesome/font-awesome.min.css" rel="stylesheet" />
+
+    <!-- bootstrap -->
+    <link href="~/Contents/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Layout stylesheet -->
+    <link rel="stylesheet" href="~/Contents/css/layout.css" />
+
+    @RenderSection("Styles", false)
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <div id="header" class="container">
+            @Html.Partial("~/Views/Shared/_Header.cshtml")
+        </div>
+        <div id="content">
+            @RenderBody()
+        </div>
+    </div>
+    <div id="footer">
+        @Html.Partial("~/Views/Shared/_Footer.cshtml")
+    </div>
+    <div id="notificaciones">
+        @Html.Partial("~/Views/Shared/_NotificacionesModal.cshtml")
+    </div>
+    
+
+    <!-- jquery -->
+    <script src="~/Contents/js/jquery-3.1.1.min.js"></script>
+    
+    <!-- bootstrap -->
+    <script src="~/Contents/js/bootstrap.min.js"></script>
+
+    @RenderSection("Scripts", false)
+</body>
+</html>

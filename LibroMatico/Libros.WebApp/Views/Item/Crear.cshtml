@@ -1,0 +1,90 @@
+﻿@model Libros.Models.Item
+@{
+    ViewBag.Title = "Crear";
+    Layout = "~/Views/_Layout.cshtml";
+
+    var Id_Perfil = Libros.WebApp.Utils.SessionManager.PerfilActivo().Id;
+}
+
+@section Styles {
+    <!-- CSS para los  item -->
+<link rel="stylesheet" href="~/Contents/css/item.css">
+
+}
+
+
+@section Scripts{
+     <!-- Scripts para los  item -->
+    <script src="@Url.Content( "~/Contents/js/download-img.js" )"></script>
+}
+<div class="container">
+    <ol class="breadcrumb">
+        <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+        <li class="active">@Html.ActionLink("Busqueda", "Busqueda", "Home")</li>
+    </ol>
+    <div class="row ">
+        <div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <div class="panel panel-default panel-shadow">
+                <div class="panel-heading">
+                    <h2 class="panel-title text-center">Crear Item</h2>
+                </div>
+                <div class="panel-body">
+                    @using (Html.BeginForm("Crear", "Item", FormMethod.Post))
+                    {
+                        <fieldset>
+                            @Html.HiddenFor(Model => Model.Id)
+                            @Html.HiddenFor(Model => Model.Propietario.Nacionalidad)
+                            @Html.HiddenFor(Model => Model.Propietario.Id)
+                            @Html.HiddenFor(Model => Model.Propietario.Nombre)
+                            @Html.HiddenFor(Model => Model.Propietario.UrlImagen)
+                            @Html.HiddenFor(Model => Model.Propietario.Nacionalidad)
+                            @Html.HiddenFor(Model => Model.Propietario.Ubicacion)
+                            @Html.HiddenFor(Model => Model.Propietario.Cuenta)
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="inTitulo" class="control-label col-xs-3">Titulo</label>
+                                    <div class="col-xs-9">
+                                        @Html.TextBoxFor(m => m.Titulo, new { @class = "form-control", @id = "Titulo", maxlength = "50" })
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                                <div class="form-group">
+                                    <label for="inResumen" class="control-label col-xs-3">Resumen</label>
+                                    <div class="col-xs-9 col-sm-9 col-md-9">
+                                        @Html.TextAreaFor(m => m.Resumen, new { @class = "form-control textarea", @id = "Resumen", maxlength = "255" })
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                                <br />
+                                @*<div class="form-group">
+                                    <label for="inImagen" class="control-label col-xs-3">Imagen</label>
+                                    <div class="col-xs-9">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="url_img" />
+                                            <div class="input-group-btn">
+
+                                                <button type="button" class="btn btn-default dropdown-toggle" download="Reporte2Mayo2010" id="btnDescarga">
+                                                    Abrir
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>*@
+                            </form>
+                            <br />
+                            <br />
+
+                            <div class="form-group pull-right">
+                                <input type="submit" value="Crear" id="Submit" class="btn btn-success" />
+                                <a type="button" href="@Url.Action("Detalles","Perfil", new {Id = Id_Perfil})" id="cancelar" class="btn btn-danger">Cancelar</a>
+                            </div>
+
+                        </fieldset>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
