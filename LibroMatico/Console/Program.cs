@@ -21,7 +21,6 @@ namespace Console
             perfil.SeleccionarPrestamo(perfil.Id, item.Id);
 
 
-            
 
         }
     }

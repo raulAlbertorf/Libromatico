@@ -1,0 +1,13 @@
+2017-05-30 02:51:04,515 [1] INFO Libromatico - Aplicación Iniciada
+2017-05-30 02:51:13,248 [5] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2017-05-30 02:51:15,883 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 11 - Propietario: 10 - Titulo: sa
+2017-05-30 02:51:15,917 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-05-30 02:51:15,955 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-05-30 02:51:15,985 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2017-05-30 02:51:16,000 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-05-30 02:51:16,164 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-05-30 02:51:16,255 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-05-30 02:51:16,270 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2017-05-30 02:51:16,292 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-05-30 02:51:16,372 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 10 - Titulo: Harry Potter y la Piedra Filosofal
+2017-05-30 02:51:16,536 [5] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados

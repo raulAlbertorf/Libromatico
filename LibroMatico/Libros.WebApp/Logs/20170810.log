@@ -1,0 +1,179 @@
+2017-08-10 20:19:33,647 [1] INFO Libromatico - Aplicación Iniciada
+2017-08-10 20:19:39,681 [6] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2017-08-10 20:19:40,822 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 11 - Propietario: 10 - Titulo: sa
+2017-08-10 20:19:40,836 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-08-10 20:19:40,846 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-08-10 20:19:40,858 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2017-08-10 20:19:40,870 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-08-10 20:19:40,880 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-08-10 20:19:40,891 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-08-10 20:19:40,903 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2017-08-10 20:19:40,912 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-08-10 20:19:40,922 [6] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 10 - Titulo: Harry Potter y la Piedra Filosofal
+2017-08-10 20:19:40,933 [6] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados
+2017-08-10 20:28:55,585 [15] INFO Libromatico - Info: Comienza Metodo: Cuenta.InicioSesion - Parametros: Email: email1@mail.cl
+2017-08-10 20:28:55,941 [15] INFO Libromatico - Info: Cuenta.IniciarSesion - Result: True
+2017-08-10 20:28:55,951 [15] INFO Libromatico - Info: Termina Metodo: Cuenta.IniciarSesion
+2017-08-10 20:28:55,967 [15] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-08-10 20:28:55,998 [15] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-08-10 20:28:56,031 [15] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-08-10 20:28:56,172 [16] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-08-10 20:28:56,250 [16] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-08-10 20:28:56,261 [16] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-08-10 20:28:56,285 [16] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-08-10 20:28:56,341 [16] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-08-10 20:28:56,386 [16] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-08-10 20:28:56,409 [16] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-08-10 20:28:56,427 [16] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-08-10 20:28:56,449 [16] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-08-10 20:28:56,476 [16] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-08-10 20:28:56,491 [16] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-08-10 20:28:56,596 [16] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-08-10 20:28:56,618 [16] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-08-10 20:28:56,669 [16] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-08-10 20:28:59,096 [17] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-08-10 20:28:59,108 [17] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-08-10 20:28:59,129 [17] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-08-10 20:28:59,213 [18] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-08-10 20:28:59,232 [18] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-08-10 20:28:59,254 [18] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-08-10 20:28:59,269 [18] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-08-10 20:28:59,285 [18] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-08-10 20:28:59,348 [18] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-08-10 20:28:59,366 [18] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-08-10 20:28:59,377 [18] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-08-10 20:28:59,392 [18] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-08-10 20:28:59,405 [18] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-08-10 20:28:59,429 [18] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-08-10 20:28:59,454 [18] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-08-10 20:28:59,515 [18] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-08-10 20:28:59,552 [18] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-08-10 20:28:59,884 [18] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-08-10 20:28:59,897 [18] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-08-10 20:28:59,911 [18] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-08-10 20:28:59,928 [18] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-08-10 20:28:59,939 [18] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-08-10 20:28:59,953 [18] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-08-10 20:28:59,966 [18] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-08-10 20:28:59,994 [18] INFO Libromatico - Info: Comienza Metodo: Perfil.MisItems - Parametros: 
+2017-08-10 20:29:00,042 [18] INFO Libromatico - Info: Perfil.MisItems - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta - EsPrestable: True
+2017-08-10 20:29:00,082 [18] INFO Libromatico - Info: Perfil.MisItems - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas - EsPrestable: False
+2017-08-10 20:29:00,092 [18] INFO Libromatico - Info: Termina Metodo: Perfil.MisItems
+2017-08-10 20:29:00,117 [18] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-08-10 20:29:00,145 [18] INFO Libromatico - Info: Item.Autores - Result: Id: 8
+2017-08-10 20:29:00,155 [18] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-08-10 20:29:00,179 [18] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:00,192 [18] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-08-10 20:29:00,203 [18] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:00,216 [18] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-08-10 20:29:00,233 [18] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-08-10 20:29:00,295 [18] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-08-10 20:29:00,305 [18] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-08-10 20:29:00,372 [18] INFO Libromatico - Info: Comienza Metodo: Item.Prestamo_Id_Item - Parametros: Id: 1
+2017-08-10 20:29:00,416 [18] INFO Libromatico - Info: Termina Metodo: Item.Prestamo_Id_Item
+2017-08-10 20:29:00,429 [18] INFO Libromatico - Info: Comienza Metodo: Prestamo.Seleccionar - Parametros: Id: 0
+2017-08-10 20:29:00,474 [18] INFO Libromatico - Info: Termina Metodo: Prestamo.Seleccionar
+2017-08-10 20:29:00,555 [18] INFO Libromatico - Info: Comienza Metodo: Item.Autores - Parametros: 
+2017-08-10 20:29:00,632 [18] INFO Libromatico - Info: Item.Autores - Result: Id: 7
+2017-08-10 20:29:00,649 [18] INFO Libromatico - Info: Item.Autores - Result: Id: 1
+2017-08-10 20:29:00,669 [18] INFO Libromatico - Info: Termina Metodo: Item.Autores
+2017-08-10 20:29:00,688 [18] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:00,716 [18] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-08-10 20:29:00,755 [18] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:00,805 [18] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-08-10 20:29:00,816 [18] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-08-10 20:29:00,834 [18] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-08-10 20:29:00,862 [18] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-08-10 20:29:00,884 [18] INFO Libromatico - Info: Comienza Metodo: Item.Prestamo_Id_Item - Parametros: Id: 1
+2017-08-10 20:29:00,905 [18] INFO Libromatico - Info: Termina Metodo: Item.Prestamo_Id_Item
+2017-08-10 20:29:00,947 [18] INFO Libromatico - Info: Comienza Metodo: Prestamo.Seleccionar - Parametros: Id: 0
+2017-08-10 20:29:01,008 [18] INFO Libromatico - Info: Termina Metodo: Prestamo.Seleccionar
+2017-08-10 20:29:01,604 [18] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:01,637 [18] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-08-10 20:29:01,661 [18] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:01,675 [18] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-08-10 20:29:01,704 [18] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-08-10 20:29:01,761 [18] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-08-10 20:29:01,817 [18] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-08-10 20:29:01,898 [18] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-08-10 20:29:01,989 [18] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-08-10 20:29:02,014 [18] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-08-10 20:29:02,051 [18] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-08-10 20:29:08,129 [17] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2017-08-10 20:29:08,155 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 11 - Propietario: 10 - Titulo: sa
+2017-08-10 20:29:08,199 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-08-10 20:29:08,212 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-08-10 20:29:08,222 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2017-08-10 20:29:08,362 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-08-10 20:29:08,402 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-08-10 20:29:08,471 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-08-10 20:29:08,505 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2017-08-10 20:29:08,555 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-08-10 20:29:08,622 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 10 - Titulo: Harry Potter y la Piedra Filosofal
+2017-08-10 20:29:08,679 [17] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados
+2017-08-10 20:29:17,164 [15] INFO Libromatico - Info: Comienza Metodo: Cuenta.InicioSesion - Parametros: Email: email1@mail.cl
+2017-08-10 20:29:17,186 [15] INFO Libromatico - Info: Cuenta.IniciarSesion - Result: True
+2017-08-10 20:29:17,203 [15] INFO Libromatico - Info: Termina Metodo: Cuenta.IniciarSesion
+2017-08-10 20:29:17,246 [15] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-08-10 20:29:17,288 [15] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-08-10 20:29:17,329 [15] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-08-10 20:29:17,421 [15] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-08-10 20:29:17,454 [15] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-08-10 20:29:17,489 [15] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-08-10 20:29:17,543 [15] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:17,632 [15] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-08-10 20:29:17,644 [15] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:17,665 [15] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-08-10 20:29:17,688 [15] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-08-10 20:29:17,711 [15] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-08-10 20:29:17,732 [15] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-08-10 20:29:17,763 [15] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-08-10 20:29:17,782 [15] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-08-10 20:29:17,797 [15] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-08-10 20:29:17,814 [15] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-08-10 20:29:21,316 [15] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2017-08-10 20:29:21,374 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 11 - Propietario: 10 - Titulo: sa
+2017-08-10 20:29:21,393 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-08-10 20:29:21,403 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-08-10 20:29:21,416 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2017-08-10 20:29:21,481 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-08-10 20:29:21,521 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-08-10 20:29:21,622 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-08-10 20:29:21,700 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2017-08-10 20:29:21,759 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-08-10 20:29:21,784 [15] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 10 - Titulo: Harry Potter y la Piedra Filosofal
+2017-08-10 20:29:21,862 [15] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados
+2017-08-10 20:29:27,411 [15] INFO Libromatico - Info: Comienza Metodo: Cuenta.InicioSesion - Parametros: Email: email1@mail.cl
+2017-08-10 20:29:27,450 [15] INFO Libromatico - Info: Cuenta.IniciarSesion - Result: True
+2017-08-10 20:29:27,466 [15] INFO Libromatico - Info: Termina Metodo: Cuenta.IniciarSesion
+2017-08-10 20:29:27,503 [15] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-08-10 20:29:27,531 [15] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-08-10 20:29:27,600 [15] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-08-10 20:29:27,686 [16] INFO Libromatico - Info: Comienza Metodo: Cuenta.Perfiles - Parametros: email1@mail.cl
+2017-08-10 20:29:27,718 [16] INFO Libromatico - Info: Cuenta.Perfiles - Result: Id 1
+2017-08-10 20:29:27,735 [16] INFO Libromatico - Info: Termina Metodo: Cuenta.Perfiles
+2017-08-10 20:29:27,752 [16] INFO Libromatico - Info: Comienza Metodo: Perfil.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:27,776 [16] INFO Libromatico - Info: Libros.Models.Perfil.Selecionar - Parametros: Id: 1
+2017-08-10 20:29:27,805 [16] INFO Libromatico - Info: Comienza Metodo: Ubicacion.Seleccionar - Parametros: Id: 1
+2017-08-10 20:29:27,844 [16] INFO Libromatico - Info: Ubicacion.Seleccionar - Parametros: Perfil_Id: 1 - lat: -35.42464 - lon: -71.65004
+2017-08-10 20:29:27,854 [16] INFO Libromatico - Info: Termina Metodo: Ubicacion.Seleccionar
+2017-08-10 20:29:27,881 [16] INFO Libromatico - Info: Perfil. - Result: Id: 1 - Email: email1@mail.cl
+2017-08-10 20:29:27,895 [16] INFO Libromatico - Info: Termina Metodo: Perfil.Seleccionar
+2017-08-10 20:29:27,905 [16] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-08-10 20:29:27,920 [16] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-08-10 20:29:27,936 [16] INFO Libromatico - Info: Comienza Metodo: Perfil.SolicitudesPrestamoEntrantes - Parametros: 
+2017-08-10 20:29:27,954 [16] INFO Libromatico - Info: Termina Metodo: Perfil.SolicitudesPrestamoEntrantes
+2017-08-10 20:29:30,615 [17] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2017-08-10 20:29:30,647 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 11 - Propietario: 10 - Titulo: sa
+2017-08-10 20:29:30,672 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-08-10 20:29:30,691 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-08-10 20:29:30,715 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2017-08-10 20:29:30,733 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-08-10 20:29:30,778 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-08-10 20:29:30,793 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-08-10 20:29:30,873 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2017-08-10 20:29:30,992 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-08-10 20:29:31,110 [17] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 10 - Titulo: Harry Potter y la Piedra Filosofal
+2017-08-10 20:29:31,149 [17] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados
+2017-08-10 20:29:36,309 [17] INFO Libromatico - Info: Comienza Metodo: Cuenta.InicioSesion - Parametros: Email: email1@mail.cl
+2017-08-10 20:29:36,360 [17] INFO Libromatico - Info: Termina Metodo: Cuenta.IniciarSesion

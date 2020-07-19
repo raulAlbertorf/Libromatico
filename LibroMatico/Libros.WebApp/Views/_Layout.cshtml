@@ -45,7 +45,12 @@
     
     <!-- bootstrap -->
     <script src="~/Contents/js/bootstrap.min.js"></script>
-
+    
+    <script type="text/javascript">
+    $(window).on('load',function(){
+        $('#NotificacionesModal').modal('show');
+    });
+    </script>
     @RenderSection("Scripts", false)
 </body>
 </html>

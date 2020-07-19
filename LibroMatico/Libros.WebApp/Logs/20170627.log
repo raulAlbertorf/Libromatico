@@ -1,0 +1,55 @@
+2017-06-27 00:45:05,747 [1] INFO Libromatico - Aplicación Iniciada
+2017-06-27 00:45:08,530 [5] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino:  - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:10,102 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-06-27 00:45:10,131 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-06-27 00:45:10,147 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-06-27 00:45:10,189 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-06-27 00:45:10,216 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:10,264 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 11 - Propietario: 10 - Titulo: sa
+2017-06-27 00:45:10,323 [5] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 00:45:20,366 [9] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: har - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:20,390 [9] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:20,442 [9] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 00:45:25,631 [5] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: har - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:25,665 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:25,679 [5] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 00:45:27,282 [10] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: har - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:27,300 [10] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:27,321 [10] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 00:45:28,784 [9] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: har - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:28,819 [9] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:28,827 [9] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 00:45:30,940 [10] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: har - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:30,952 [10] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:30,965 [10] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 00:45:37,816 [5] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: har - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:37,826 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:37,839 [5] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 00:45:39,101 [9] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: har - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:39,121 [9] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:39,133 [9] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 00:45:39,958 [10] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: har - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:39,993 [10] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:40,008 [10] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 00:45:44,105 [5] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: har - Paguina: 1 - CantResult: 10
+2017-06-27 00:45:44,122 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 00:45:44,135 [5] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 01:00:20,962 [1] INFO Libromatico - Aplicación Iniciada
+2017-06-27 01:00:24,604 [5] INFO Libromatico - Info: Comienza Metodo: Estanteria.UltimosAgregados - Parametros: Cantidad: 10
+2017-06-27 01:00:26,635 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 11 - Propietario: 10 - Titulo: sa
+2017-06-27 01:00:26,697 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 01:00:26,725 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 8 - Propietario: 6 - Titulo: Shades of Earth
+2017-06-27 01:00:26,747 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 7 - Propietario: 4 - Titulo: El angel de la oscuridad
+2017-06-27 01:00:26,761 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 6 - Propietario: 5 - Titulo: National Geographic
+2017-06-27 01:00:26,774 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 5 - Propietario: 1 - Titulo: No subas
+2017-06-27 01:00:26,786 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 4 - Propietario: 4 - Titulo: Un libro para renacer cada día
+2017-06-27 01:00:26,798 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 3 - Propietario: 3 - Titulo: Cartas desde la isla sky
+2017-06-27 01:00:26,812 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 2 - Propietario: 2 - Titulo: Papelucho
+2017-06-27 01:00:26,825 [5] INFO Libromatico - Info: Estanteria.UltimosAgregados - Result: Item: Id: 1 - Propietario: 10 - Titulo: Harry Potter y la Piedra Filosofal
+2017-06-27 01:00:26,860 [5] INFO Libromatico - Info: Termina Metodo: Estanteria.UltimosAgregados
+2017-06-27 01:00:51,816 [5] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: harr - Paguina: 1 - CantResult: 10
+2017-06-27 01:00:51,936 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 01:00:51,954 [5] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
+2017-06-27 01:01:15,133 [5] INFO Libromatico - Info: Comienza Metodo: Estanteria.Buscar - Parametros: Termino: harr - Paguina: 1 - CantResult: 10
+2017-06-27 01:01:15,151 [5] INFO Libromatico - Info: Estanteria.Buscar - Result: Item: Id: 9 - Propietario: 1 - Titulo: Harry Potter y la cámara secreta
+2017-06-27 01:01:15,180 [5] INFO Libromatico - Info: Termina Metodo: Estanteria.Buscar
